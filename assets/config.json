@@ -6,44 +6,164 @@
             "name_ar": "المصارف",
             "providers": [
                 {
-                    "id": "juran",
-                    "name_en": "Juran Bank",
-                    "name_ar": "بنك جُران",
+                    "id": "nuran",
+                    "name_en": "Nuran Bank",
+                    "name_ar": "مصرف النوران",
+                    "description_en": "The SMS service keeps you updated on all account movements like deposits and withdrawals. It auto-subscribes upon account opening. You can request via SMS to 20002 and choose message language as follows.",
+                    "description_ar": "خدمة الرسائل النصية تبقيك هده الخدمة على اطلاع دائم بكل حركات حسابك من ايداع وخصم. يتم الاشتراك تلقائياً عند فتح الحساب. يمكنك طلبها بإرسال رسالة إلى الرقم (20002) ويمكن اختيار لغة عرض الرسائل كالتالي.",
                     "actions": [
                         {
-                            "id": "check_balance",
-                            "name_en": "Check Balance",
-                            "name_ar": "استعلام الرصيد",
+                            "id": "subscribe",
+                            "name_en": "Subscribe SMS Service",
+                            "name_ar": "الاشتراك في خدمة الرسائل",
                             "smsNumber": "20002",
-                            "template": "{branch}{account}",
+                            "template": "Nub6 {account}*{lang}",
                             "fields": [
-                                {
-                                    "id": "branch",
-                                    "label_en": "Branch",
-                                    "label_ar": "الفرع",
-                                    "type": "dropdown",
-                                    "options": [
-                                        {
-                                            "label_en": "Tripoli",
-                                            "label_ar": "طرابلس",
-                                            "value": "01"
-                                        },
-                                        {
-                                            "label_en": "Benghazi",
-                                            "label_ar": "بنغازي",
-                                            "value": "02"
-                                        },
-                                        {
-                                            "label_en": "Misrata",
-                                            "label_ar": "مصراتة",
-                                            "value": "03"
-                                        }
-                                    ]
-                                },
                                 {
                                     "id": "account",
                                     "label_en": "Account No.",
                                     "label_ar": "رقم الحساب",
+                                    "type": "text"
+                                },
+                                {
+                                    "id": "lang",
+                                    "label_en": "Language",
+                                    "label_ar": "اللغة",
+                                    "type": "dropdown",
+                                    "options": [
+                                        {
+                                            "label_en": "Arabic",
+                                            "label_ar": "عربي",
+                                            "value": "A"
+                                        },
+                                        {
+                                            "label_en": "English",
+                                            "label_ar": "انجليزي",
+                                            "value": "E"
+                                        }
+                                    ]
+                                }
+                            ]
+                        },
+                        {
+                            "id": "subscribe_en",
+                            "name_en": "Subscribe SMS Service (EN)",
+                            "name_ar": "الاشتراك في خدمة الرسائل (انجليزي)",
+                            "smsNumber": "20002",
+                            "template": "Nub6 {account}*E",
+                            "fields": [
+                                {
+                                    "id": "account",
+                                    "label_en": "Account No.",
+                                    "label_ar": "رقم الحساب",
+                                    "type": "text"
+                                }
+                            ]
+                        },
+                        {
+                            "id": "check_balance",
+                            "name_en": "Check Balance",
+                            "name_ar": "الاستعلام عن الرصيد",
+                            "smsNumber": "20002",
+                            "template": "Nub1 {account}",
+                            "fields": [
+                                {
+                                    "id": "account",
+                                    "label_en": "Account No.",
+                                    "label_ar": "رقم الحساب",
+                                    "type": "text"
+                                }
+                            ]
+                        },
+                        {
+                            "id": "last3",
+                            "name_en": "Last 3 Transactions",
+                            "name_ar": "الاستعلام على اخر 3 حركات",
+                            "smsNumber": "20002",
+                            "template": "Nub2 {account}",
+                            "fields": [
+                                {
+                                    "id": "account",
+                                    "label_en": "Account No.",
+                                    "label_ar": "رقم الحساب",
+                                    "type": "text"
+                                }
+                            ]
+                        },
+                        {
+                            "id": "check_iban",
+                            "name_en": "Check IBAN",
+                            "name_ar": "الاستعلام على IBAN",
+                            "smsNumber": "20002",
+                            "template": "Nub3 {account}",
+                            "fields": [
+                                {
+                                    "id": "account",
+                                    "label_en": "Account No.",
+                                    "label_ar": "رقم الحساب",
+                                    "type": "text"
+                                }
+                            ]
+                        },
+                        {
+                            "id": "account_info",
+                            "name_en": "Account Info",
+                            "name_ar": "الاستعلام عن بياناتك",
+                            "smsNumber": "20002",
+                            "template": "Nub4 {account}",
+                            "fields": [
+                                {
+                                    "id": "account",
+                                    "label_en": "Account No.",
+                                    "label_ar": "رقم الحساب",
+                                    "type": "text"
+                                }
+                            ]
+                        },
+                        {
+                            "id": "lypay_status",
+                            "name_en": "LYPAY Status",
+                            "name_ar": "حالة حساب LYPAY",
+                            "smsNumber": "20002",
+                            "template": "NUBLY {account}",
+                            "fields": [
+                                {
+                                    "id": "account",
+                                    "label_en": "Account No.",
+                                    "label_ar": "رقم الحساب",
+                                    "type": "text"
+                                }
+                            ]
+                        },
+                        {
+                            "id": "update_info",
+                            "name_en": "Update Account Info",
+                            "name_ar": "تحديث بياناتكم المصرفية",
+                            "smsNumber": "20002",
+                            "template": "Nub9 {account}*{ssn}*{passport}*{phone}",
+                            "fields": [
+                                {
+                                    "id": "account",
+                                    "label_en": "Account No.",
+                                    "label_ar": "رقم الحساب",
+                                    "type": "text"
+                                },
+                                {
+                                    "id": "ssn",
+                                    "label_en": "National ID",
+                                    "label_ar": "الرقم الوطني",
+                                    "type": "text"
+                                },
+                                {
+                                    "id": "passport",
+                                    "label_en": "Passport No.",
+                                    "label_ar": "جواز السفر",
+                                    "type": "text"
+                                },
+                                {
+                                    "id": "phone",
+                                    "label_en": "Phone No.",
+                                    "label_ar": "رقم الهاتف",
                                     "type": "text"
                                 }
                             ]
