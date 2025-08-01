@@ -46,21 +46,6 @@
                             ]
                         },
                         {
-                            "id": "subscribe_en",
-                            "name_en": "Subscribe SMS Service (EN)",
-                            "name_ar": "الاشتراك في خدمة الرسائل (انجليزي)",
-                            "smsNumber": "20002",
-                            "template": "Nub6 {account}*E",
-                            "fields": [
-                                {
-                                    "id": "account",
-                                    "label_en": "Account No.",
-                                    "label_ar": "رقم الحساب",
-                                    "type": "text"
-                                }
-                            ]
-                        },
-                        {
                             "id": "check_balance",
                             "name_en": "Check Balance",
                             "name_ar": "الاستعلام عن الرصيد",
