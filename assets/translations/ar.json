@@ -1,0 +1,14 @@
+{
+    "app_title": "أوامر الرسائل",
+    "select_category": "اختر القسم",
+    "select_provider": "اختر المزود",
+    "select_action": "اختر العملية",
+    "enter": "أدخل",
+    "send": "إرسال رسالة",
+    "sms_sent": "تم إرسال الرسالة",
+    "categories": "الفئات",
+    "providers": "المزودون",
+    "actions": "العمليات",
+    "loading": "جارٍ التحميل...",
+    "required": "مطلوب"
+}

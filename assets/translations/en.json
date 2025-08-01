@@ -1,0 +1,14 @@
+{
+    "app_title": "SMS Commands",
+    "select_category": "Select Category",
+    "select_provider": "Select Provider",
+    "select_action": "Select Action",
+    "enter": "Enter",
+    "send": "Send SMS",
+    "sms_sent": "SMS sent",
+    "categories": "Categories",
+    "providers": "Providers",
+    "actions": "Actions",
+    "loading": "Loading...",
+    "required": "Required"
+}
