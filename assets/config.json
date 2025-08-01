@@ -929,6 +929,29 @@
                     "description_ar": "خدمات مصرفية عبر الرسائل النصية القصيرة. احجز موعدك لزيارة فروع أتيب، وتجنب الازدحام والانتظار! للاستفادة من أي خدمة من الخدمات التالية أرسل رسالة إلى رقم أتيب 19000 من اليسار إلى اليمين. [2]",
                     "actions": [
                         {
+                            "id": "update_cbl_info",
+                            "name_en": "Update CBL Info",
+                            "name_ar": "تحديث بيانات CBL",
+                            "description_en": "If your National ID, passport, and phone number do not match the CBL booking platform, please reply to the message with your passport number and the phone number you registered with.",
+                            "description_ar": "زبوننا الكريم، في حال كانت بيانات الرقم الوطني وجواز السفر ورقم الهاتف غير متطابقة مع منصة حجز CBL للأفراد، الرجاء الرد علي هذه الرسالة برقم الجواز*رقم الهاتف الذي قمتم بالتسجيل به.",
+                            "smsNumber": "19000",
+                            "template": "{passport_number}*{phone_number}",
+                            "fields": [
+                                {
+                                    "id": "passport_number",
+                                    "label_en": "Passport Number",
+                                    "label_ar": "رقم الجواز",
+                                    "type": "text"
+                                },
+                                {
+                                    "id": "phone_number",
+                                    "label_en": "Registered Phone Number",
+                                    "label_ar": "رقم الهاتف المسجل به",
+                                    "type": "text"
+                                }
+                            ]
+                        },
+                        {
                             "id": "book_cash_withdrawal",
                             "name_en": "Book a cash withdrawal appointment",
                             "name_ar": "احجز موعد سحب السيولة النقدية",
