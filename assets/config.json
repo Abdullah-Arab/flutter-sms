@@ -166,7 +166,7 @@
                             "name_en": "Reactivate MyPlus App",
                             "name_ar": "إعادة تفعيل MyPlus",
                             "smsNumber": "16016",
-                            "template": "70",
+                            "template": "{pin}*70",
                             "fields": [
                                 {
                                     "id": "pin",
