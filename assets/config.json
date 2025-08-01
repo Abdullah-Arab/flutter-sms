@@ -931,7 +931,7 @@
                         {
                             "id": "update_cbl_info",
                             "name_en": "Update CBL Info",
-                            "name_ar": "تحديث بيانات CBL",
+                            "name_ar": "تحديث بيانات منظومة الدولار",
                             "description_en": "If your National ID, passport, and phone number do not match the CBL booking platform, please reply to the message with your passport number and the phone number you registered with.",
                             "description_ar": "زبوننا الكريم، في حال كانت بيانات الرقم الوطني وجواز السفر ورقم الهاتف غير متطابقة مع منصة حجز CBL للأفراد، الرجاء الرد علي هذه الرسالة برقم الجواز*رقم الهاتف الذي قمتم بالتسجيل به.",
                             "smsNumber": "19000",
