@@ -538,6 +538,150 @@
                     ]
                 },
                 {
+                    "id": "jumhouria-efa",
+                    "name_en": "Jumhouria Bank - E-fa Card",
+                    "name_ar": "مصرف الجمهورية - بطاقة إيفاء",
+                    "description_en": "Manage your E-fa card by sending an SMS to 15051.",
+                    "description_ar": "لإدارة بطاقة إيفاء الخاصة بك عبر إرسال رسالة نصية قصيرة إلى 15051.",
+                    "actions": [
+                        {
+                            "id": "check_balance_efa",
+                            "name_en": "Check balance",
+                            "name_ar": "معرفة الرصيد",
+                            "smsNumber": "15051",
+                            "template": "01*{last_4_digits}",
+                            "fields": [
+                                {
+                                    "id": "last_4_digits",
+                                    "label_en": "Last 4 digits of your card",
+                                    "label_ar": "آخر 4 أرقام من بطاقتك",
+                                    "type": "text"
+                                }
+                            ]
+                        },
+                        {
+                            "id": "activate_card_efa",
+                            "name_en": "Activate card",
+                            "name_ar": "تفعيل البطاقة",
+                            "smsNumber": "15051",
+                            "template": "02*01*{last_4_digits}",
+                            "fields": [
+                                {
+                                    "id": "last_4_digits",
+                                    "label_en": "Last 4 digits of your card",
+                                    "label_ar": "آخر 4 أرقام من بطاقتك",
+                                    "type": "text"
+                                }
+                            ]
+                        },
+                        {
+                            "id": "deactivate_card_efa",
+                            "name_en": "Deactivate card",
+                            "name_ar": "إلغاء تفعيل بطاقة",
+                            "smsNumber": "15051",
+                            "template": "02*02*{last_4_digits}",
+                            "fields": [
+                                {
+                                    "id": "last_4_digits",
+                                    "label_en": "Last 4 digits of your card",
+                                    "label_ar": "آخر 4 أرقام من بطاقتك",
+                                    "type": "text"
+                                }
+                            ]
+                        },
+                        {
+                            "id": "last_3_transactions_efa",
+                            "name_en": "Last 3 card transactions",
+                            "name_ar": "آخر 3 معاملات للبطاقة",
+                            "smsNumber": "15051",
+                            "template": "03*01*{last_4_digits}",
+                            "fields": [
+                                {
+                                    "id": "last_4_digits",
+                                    "label_en": "Last 4 digits of your card",
+                                    "label_ar": "آخر 4 أرقام من بطاقتك",
+                                    "type": "text"
+                                }
+                            ]
+                        },
+                        {
+                            "id": "last_5_transactions_efa",
+                            "name_en": "Last 5 card transactions",
+                            "name_ar": "آخر 5 معاملات للبطاقة",
+                            "smsNumber": "15051",
+                            "template": "03*03*{last_4_digits}",
+                            "fields": [
+                                {
+                                    "id": "last_4_digits",
+                                    "label_en": "Last 4 digits of your card",
+                                    "label_ar": "آخر 4 أرقام من بطاقتك",
+                                    "type": "text"
+                                }
+                            ]
+                        },
+                        {
+                            "id": "new_pin_efa",
+                            "name_en": "New PIN",
+                            "name_ar": "رقم سري جديد",
+                            "smsNumber": "15051",
+                            "template": "04*01*{last_4_digits}",
+                            "fields": [
+                                {
+                                    "id": "last_4_digits",
+                                    "label_en": "Last 4 digits of your card",
+                                    "label_ar": "آخر 4 أرقام من بطاقتك",
+                                    "type": "text"
+                                }
+                            ]
+                        },
+                        {
+                            "id": "reissue_card_efa",
+                            "name_en": "Re-issue card",
+                            "name_ar": "إعادة إصدار بطاقة",
+                            "smsNumber": "15051",
+                            "template": "05*{last_4_digits}",
+                            "fields": [
+                                {
+                                    "id": "last_4_digits",
+                                    "label_en": "Last 4 digits of your card",
+                                    "label_ar": "آخر 4 أرقام من بطاقتك",
+                                    "type": "text"
+                                }
+                            ]
+                        },
+                        {
+                            "id": "last_5_deposits_efa",
+                            "name_en": "Last 5 deposit transactions",
+                            "name_ar": "آخر 5 عمليات إيداع للبطاقة",
+                            "smsNumber": "15051",
+                            "template": "06*{last_4_digits}",
+                            "fields": [
+                                {
+                                    "id": "last_4_digits",
+                                    "label_en": "Last 4 digits of your card",
+                                    "label_ar": "آخر 4 أرقام من بطاقتك",
+                                    "type": "text"
+                                }
+                            ]
+                        },
+                        {
+                            "id": "card_status_efa",
+                            "name_en": "Check card status",
+                            "name_ar": "معرفة حالة البطاقة",
+                            "smsNumber": "15051",
+                            "template": "07*{last_4_digits}",
+                            "fields": [
+                                {
+                                    "id": "last_4_digits",
+                                    "label_en": "Last 4 digits of your card",
+                                    "label_ar": "آخر 4 أرقام من بطاقتك",
+                                    "type": "text"
+                                }
+                            ]
+                        }
+                    ]
+                },
+                {
                     "id": "yaqeen",
                     "name_en": "Yaqeen Bank",
                     "name_ar": "مصرف اليقين",
