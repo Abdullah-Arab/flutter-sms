@@ -3,29 +3,66 @@
         {
             "id": "banking",
             "name_en": "Banking",
-            "name_ar": "خدمات مصرفية",
-            "vendors": [
+            "name_ar": "المصارف",
+            "providers": [
                 {
-                    "id": "juran_bank",
+                    "id": "juran",
                     "name_en": "Juran Bank",
                     "name_ar": "بنك جُران",
-                    "shortcode": "20002",
-                    "commands": [
+                    "actions": [
                         {
-                            "id": "balance",
+                            "id": "check_balance",
                             "name_en": "Check Balance",
-                            "name_ar": "الاستعلام عن الرصيد",
-                            "template": "Nub4 {account}"
-                        },
-                        {
-                            "id": "info",
-                            "name_en": "Account Info",
-                            "name_ar": "معلومات الحساب",
-                            "template": "Nub9 {account}*{ssn}*{phone}"
+                            "name_ar": "استعلام الرصيد",
+                            "smsNumber": "20002",
+                            "template": "{branch}{account}",
+                            "fields": [
+                                {
+                                    "id": "branch",
+                                    "label_en": "Branch",
+                                    "label_ar": "الفرع",
+                                    "type": "dropdown",
+                                    "options": [
+                                        {
+                                            "label_en": "Tripoli",
+                                            "label_ar": "طرابلس",
+                                            "value": "01"
+                                        },
+                                        {
+                                            "label_en": "Benghazi",
+                                            "label_ar": "بنغازي",
+                                            "value": "02"
+                                        },
+                                        {
+                                            "label_en": "Misrata",
+                                            "label_ar": "مصراتة",
+                                            "value": "03"
+                                        }
+                                    ]
+                                },
+                                {
+                                    "id": "account",
+                                    "label_en": "Account No.",
+                                    "label_ar": "رقم الحساب",
+                                    "type": "text"
+                                }
+                            ]
                         }
                     ]
                 }
             ]
+        },
+        {
+            "id": "government",
+            "name_en": "Government",
+            "name_ar": "الحكومة",
+            "providers": []
+        },
+        {
+            "id": "telecom",
+            "name_en": "Telecom",
+            "name_ar": "الاتصالات",
+            "providers": []
         }
     ]
 }
