@@ -776,6 +776,824 @@
                             ]
                         }
                     ]
+                },
+                {
+                    "id": "assaray",
+                    "name_en": "Assaray Bank",
+                    "name_ar": "مصرف أتيب",
+                    "description_en": "Banking services via SMS. Book your appointment to visit ATIB branches and avoid crowds and waiting! To take advantage of any of the following services, send a message to the ATIB number 19000 from left to right.",
+                    "description_ar": "خدمات مصرفية عبر الرسائل النصية القصيرة. احجز موعدك لزيارة فروع أتيب، وتجنب الازدحام والانتظار! للاستفادة من أي خدمة من الخدمات التالية أرسل رسالة إلى رقم أتيب 19000 من اليسار إلى اليمين. [2]",
+                    "actions": [
+                        {
+                            "id": "book_cash_withdrawal",
+                            "name_en": "Book a cash withdrawal appointment",
+                            "name_ar": "احجز موعد سحب السيولة النقدية",
+                            "smsNumber": "19000",
+                            "template": "{pin}*{branch_code}*{amount}",
+                            "fields": [
+                                {
+                                    "id": "pin",
+                                    "label_en": "PIN",
+                                    "label_ar": "الرقم السري",
+                                    "type": "text"
+                                },
+                                {
+                                    "id": "branch_code",
+                                    "label_en": "Branch Code",
+                                    "label_ar": "رمز الفرع",
+                                    "type": "dropdown",
+                                    "options": [
+                                        {
+                                            "label_en": "Gurji Branch (Individuals)",
+                                            "label_ar": "فرع قرجي أفراد",
+                                            "value": "72"
+                                        },
+                                        {
+                                            "label_en": "Al-Saadia Agency",
+                                            "label_ar": "وكالة الساعدية",
+                                            "value": "71"
+                                        },
+                                        {
+                                            "label_en": "Misrata Branch",
+                                            "label_ar": "فرع مصراتة",
+                                            "value": "1060"
+                                        }
+                                    ]
+                                },
+                                {
+                                    "id": "amount",
+                                    "label_en": "Amount to withdraw",
+                                    "label_ar": "المبلغ المراد سحبه",
+                                    "type": "text"
+                                }
+                            ]
+                        },
+                        {
+                            "id": "cancel_appointment",
+                            "name_en": "Cancel appointment",
+                            "name_ar": "إلغاء الموعد",
+                            "smsNumber": "19000",
+                            "template": "{pin}*72*0",
+                            "fields": [
+                                {
+                                    "id": "pin",
+                                    "label_en": "PIN",
+                                    "label_ar": "الرقم السري",
+                                    "type": "text"
+                                }
+                            ]
+                        },
+                        {
+                            "id": "buy_card",
+                            "name_en": "Buy prepaid cards",
+                            "name_ar": "شراء كروت رصيد الاتصالات",
+                            "smsNumber": "19000",
+                            "template": "{pin}*{company_code}*{value}",
+                            "fields": [
+                                {
+                                    "id": "pin",
+                                    "label_en": "PIN",
+                                    "label_ar": "الرقم السري",
+                                    "type": "text"
+                                },
+                                {
+                                    "id": "company_code",
+                                    "label_en": "Company",
+                                    "label_ar": "الشركة",
+                                    "type": "dropdown",
+                                    "options": [
+                                        {
+                                            "label_en": "Libyana",
+                                            "label_ar": "ليبيانا",
+                                            "value": "30"
+                                        },
+                                        {
+                                            "label_en": "Almadar",
+                                            "label_ar": "المدار",
+                                            "value": "31"
+                                        },
+                                        {
+                                            "label_en": "LTT",
+                                            "label_ar": "LTT",
+                                            "value": "32"
+                                        },
+                                        {
+                                            "label_en": "Hatif Libya",
+                                            "label_ar": "هاتف ليبيا",
+                                            "value": "33"
+                                        },
+                                        {
+                                            "label_en": "LNET",
+                                            "label_ar": "LNET",
+                                            "value": "38"
+                                        },
+                                        {
+                                            "label_en": "Bernichi",
+                                            "label_ar": "برنيتشي",
+                                            "value": "39"
+                                        },
+                                        {
+                                            "label_en": "Pro Net",
+                                            "label_ar": "برو نت",
+                                            "value": "40"
+                                        },
+                                        {
+                                            "label_en": "Shams Internet",
+                                            "label_ar": "شمس انترنت",
+                                            "value": "42"
+                                        },
+                                        {
+                                            "label_en": "Zajil Al-Gharbia",
+                                            "label_ar": "زاجل الغربية للاتصالات و التقنية",
+                                            "value": "43"
+                                        },
+                                        {
+                                            "label_en": "Al-Takamul",
+                                            "label_ar": "التكامل للاتصالات وتقنية المعلومات",
+                                            "value": "44"
+                                        },
+                                        {
+                                            "label_en": "Al-Ghad Platform",
+                                            "label_ar": "منصة الغد التعليمية",
+                                            "value": "45"
+                                        },
+                                        {
+                                            "label_en": "Extra Net",
+                                            "label_ar": "اكسترا نت",
+                                            "value": "46"
+                                        },
+                                        {
+                                            "label_en": "Al-Maham",
+                                            "label_ar": "المهام للاتصالات والتقنية",
+                                            "value": "47"
+                                        },
+                                        {
+                                            "label_en": "Tibesti",
+                                            "label_ar": "تيبستي للاتصالات والتقنية",
+                                            "value": "48"
+                                        },
+                                        {
+                                            "label_en": "Awal Libya",
+                                            "label_ar": "شركة أوال ليبيا للاتصالات والتقنية",
+                                            "value": "49"
+                                        },
+                                        {
+                                            "label_en": "Giga",
+                                            "label_ar": "جيجا",
+                                            "value": "51"
+                                        },
+                                        {
+                                            "label_en": "Al-Riyada",
+                                            "label_ar": "الريادة",
+                                            "value": "52"
+                                        },
+                                        {
+                                            "label_en": "Al-Kafaa",
+                                            "label_ar": "الكفاءة",
+                                            "value": "53"
+                                        },
+                                        {
+                                            "label_en": "Dalkonet",
+                                            "label_ar": "دلكونت",
+                                            "value": "54"
+                                        },
+                                        {
+                                            "label_en": "Al-Nabdha Al-Raqamiya",
+                                            "label_ar": "النبضة الرقمية",
+                                            "value": "56"
+                                        },
+                                        {
+                                            "label_en": "Smart Net",
+                                            "label_ar": "سمارت نت",
+                                            "value": "57"
+                                        },
+                                        {
+                                            "label_en": "Zajil Libya",
+                                            "label_ar": "زاجل ليبيا",
+                                            "value": "58"
+                                        },
+                                        {
+                                            "label_en": "Sky Net",
+                                            "label_ar": "سكاى نت",
+                                            "value": "59"
+                                        },
+                                        {
+                                            "label_en": "Gourina",
+                                            "label_ar": "قورينا",
+                                            "value": "61"
+                                        },
+                                        {
+                                            "label_en": "Libya Soft Home",
+                                            "label_ar": "ليبيا سوفت منزلي",
+                                            "value": "62"
+                                        },
+                                        {
+                                            "label_en": "Libya Soft HotSpot",
+                                            "label_ar": "ليبيا سوفت HotSpot",
+                                            "value": "63"
+                                        },
+                                        {
+                                            "label_en": "Al-Burj Telecom - Subscription",
+                                            "label_ar": "البرج للاتصالات - اشتراك",
+                                            "value": "64"
+                                        },
+                                        {
+                                            "label_en": "Smart 300",
+                                            "label_ar": "سمارت 300",
+                                            "value": "66"
+                                        },
+                                        {
+                                            "label_en": "OpenSooq",
+                                            "label_ar": "السوق المفتوح",
+                                            "value": "67"
+                                        },
+                                        {
+                                            "label_en": "Oxygen",
+                                            "label_ar": "اكسجين",
+                                            "value": "68"
+                                        },
+                                        {
+                                            "label_en": "Libyan Spider",
+                                            "label_ar": "العنكبوت الليبي",
+                                            "value": "69"
+                                        },
+                                        {
+                                            "label_en": "Sadeem Group",
+                                            "label_ar": "سديم قروب",
+                                            "value": "74"
+                                        },
+                                        {
+                                            "label_en": "Link Net",
+                                            "label_ar": "لينك نت",
+                                            "value": "75"
+                                        },
+                                        {
+                                            "label_en": "Al-Juman Al-Jadeed",
+                                            "label_ar": "الجمان الجديد",
+                                            "value": "76"
+                                        },
+                                        {
+                                            "label_en": "Al-Hadatha",
+                                            "label_ar": "الحداثة",
+                                            "value": "81"
+                                        },
+                                        {
+                                            "label_en": "DS Net",
+                                            "label_ar": "دي اس نت",
+                                            "value": "82"
+                                        },
+                                        {
+                                            "label_en": "Ozone",
+                                            "label_ar": "اوزون",
+                                            "value": "83"
+                                        },
+                                        {
+                                            "label_en": "Academia",
+                                            "label_ar": "أكاديميا",
+                                            "value": "84"
+                                        },
+                                        {
+                                            "label_en": "Digital Horizon Company",
+                                            "label_ar": "شركة الأفق الرقمي",
+                                            "value": "85"
+                                        },
+                                        {
+                                            "label_en": "Spetar Health",
+                                            "label_ar": "سبيتار الصحة",
+                                            "value": "86"
+                                        },
+                                        {
+                                            "label_en": "Sky Tech",
+                                            "label_ar": "سكاي تك",
+                                            "value": "90"
+                                        },
+                                        {
+                                            "label_en": "Sahab Libya",
+                                            "label_ar": "سحاب ليبيا",
+                                            "value": "91"
+                                        },
+                                        {
+                                            "label_en": "Edah Learning Platform",
+                                            "label_ar": "منصة إيضاح التعلمية",
+                                            "value": "94"
+                                        },
+                                        {
+                                            "label_en": "Hi Net",
+                                            "label_ar": "هاي نت لخدمات الإتصالات والتقنية",
+                                            "value": "95"
+                                        },
+                                        {
+                                            "label_en": "iTunes US",
+                                            "label_ar": "آي تيونز امريكي",
+                                            "value": "101"
+                                        },
+                                        {
+                                            "label_en": "Razer Gold",
+                                            "label_ar": "ريزر جولد",
+                                            "value": "102"
+                                        },
+                                        {
+                                            "label_en": "PUBG",
+                                            "label_ar": "ببجى",
+                                            "value": "105"
+                                        },
+                                        {
+                                            "label_en": "Xbox US",
+                                            "label_ar": "اكس بوكس امريكي",
+                                            "value": "110"
+                                        },
+                                        {
+                                            "label_en": "PlayStation US",
+                                            "label_ar": "بلاي ستيشن امريكي",
+                                            "value": "120"
+                                        },
+                                        {
+                                            "label_en": "PlayStation UAE",
+                                            "label_ar": "بلايستيشن إماراتي",
+                                            "value": "121"
+                                        },
+                                        {
+                                            "label_en": "Connect",
+                                            "label_ar": "كونكت",
+                                            "value": "201"
+                                        },
+                                        {
+                                            "label_en": "Ishrahli",
+                                            "label_ar": "اشرحلي",
+                                            "value": "202"
+                                        },
+                                        {
+                                            "label_en": "Smart Wave",
+                                            "label_ar": "الموجة الذكية",
+                                            "value": "203"
+                                        },
+                                        {
+                                            "label_en": "Hawana",
+                                            "label_ar": "هوانا",
+                                            "value": "204"
+                                        },
+                                        {
+                                            "label_en": "Sana Telecom Zliten",
+                                            "label_ar": "سنا للاتصالات والتقنية زليتن",
+                                            "value": "205"
+                                        },
+                                        {
+                                            "label_en": "Sana Telecom Jufra",
+                                            "label_ar": "سنا للاتصالات والتقنية الجفرة",
+                                            "value": "206"
+                                        },
+                                        {
+                                            "label_en": "Taranim Al-Elm",
+                                            "label_ar": "ترانيـم العلـم",
+                                            "value": "207"
+                                        },
+                                        {
+                                            "label_en": "Sana Telecom Bani Walid",
+                                            "label_ar": "سنا للاتصالات والتقنية بن وليد",
+                                            "value": "208"
+                                        },
+                                        {
+                                            "label_en": "Turbo",
+                                            "label_ar": "توربو",
+                                            "value": "209"
+                                        },
+                                        {
+                                            "label_en": "Speedly",
+                                            "label_ar": "سبيدلي",
+                                            "value": "210"
+                                        },
+                                        {
+                                            "label_en": "Horizons Net",
+                                            "label_ar": "هورايزونز نت",
+                                            "value": "211"
+                                        },
+                                        {
+                                            "label_en": "iTravel",
+                                            "label_ar": "اي ترافل",
+                                            "value": "212"
+                                        },
+                                        {
+                                            "label_en": "Libyan Job Site",
+                                            "label_ar": "موقع التوظيف الليبي",
+                                            "value": "213"
+                                        },
+                                        {
+                                            "label_en": "Nasma Net",
+                                            "label_ar": "نسمة نت",
+                                            "value": "214"
+                                        },
+                                        {
+                                            "label_en": "Al-Jabal Internet",
+                                            "label_ar": "شركة الجبل للانترنت",
+                                            "value": "215"
+                                        },
+                                        {
+                                            "label_en": "Smart Platform",
+                                            "label_ar": "منصة سمارت للتعليم عن بعد",
+                                            "value": "216"
+                                        },
+                                        {
+                                            "label_en": "Al-Mada Al-Raqami Al-Awal",
+                                            "label_ar": "المدى الرقمي الاول",
+                                            "value": "217"
+                                        },
+                                        {
+                                            "label_en": "Sharara Technology",
+                                            "label_ar": "شرارة التقنية للاتصالات وتقنية المعلومات",
+                                            "value": "218"
+                                        },
+                                        {
+                                            "label_en": "Cyber Net Roaming",
+                                            "label_ar": "سايبر نت تجوال",
+                                            "value": "219"
+                                        },
+                                        {
+                                            "label_en": "Cyber Net Home",
+                                            "label_ar": "سايبر نت منزلي",
+                                            "value": "220"
+                                        },
+                                        {
+                                            "label_en": "Rawabit Net",
+                                            "label_ar": "روابط نت",
+                                            "value": "221"
+                                        },
+                                        {
+                                            "label_en": "Al-Indimaj Al-Awal",
+                                            "label_ar": "الإندماج الاول",
+                                            "value": "222"
+                                        },
+                                        {
+                                            "label_en": "Sila Net",
+                                            "label_ar": "صلة نت",
+                                            "value": "223"
+                                        },
+                                        {
+                                            "label_en": "Abraj Libya",
+                                            "label_ar": "أبراج ليبيا",
+                                            "value": "230"
+                                        },
+                                        {
+                                            "label_en": "Orange Net",
+                                            "label_ar": "أورنج نت",
+                                            "value": "231"
+                                        },
+                                        {
+                                            "label_en": "Zain Telecom",
+                                            "label_ar": "زين للاتصالات والتقنية",
+                                            "value": "232"
+                                        },
+                                        {
+                                            "label_en": "Al-Qasr Al-Manea Hotspot",
+                                            "label_ar": "القصر المنيع هوت سبوت",
+                                            "value": "233"
+                                        },
+                                        {
+                                            "label_en": "Al-Qasr Al-Manea Home",
+                                            "label_ar": "القصر المنيع منزلي",
+                                            "value": "234"
+                                        },
+                                        {
+                                            "label_en": "Al-Afriqiya Net",
+                                            "label_ar": "الأفريقية نت",
+                                            "value": "235"
+                                        },
+                                        {
+                                            "label_en": "Technical Team",
+                                            "label_ar": "الفريق التقني للأتصالات والتقنية",
+                                            "value": "239"
+                                        },
+                                        {
+                                            "label_en": "Shahid",
+                                            "label_ar": "شاهد",
+                                            "value": "241"
+                                        },
+                                        {
+                                            "label_en": "Sana Telecom Tawergha and Abu Qurain",
+                                            "label_ar": "سنا للاتصالات والتقنية تاورغاء وأبوقرين",
+                                            "value": "247"
+                                        },
+                                        {
+                                            "label_en": "Libda Digital Broadcasting System",
+                                            "label_ar": "منظومة لبدة للبث الرقمي",
+                                            "value": "248"
+                                        },
+                                        {
+                                            "label_en": "Sana Libya",
+                                            "label_ar": "سنا ليبيا",
+                                            "value": "249"
+                                        },
+                                        {
+                                            "label_en": "Rayat Al-Salam",
+                                            "label_ar": "راية السلام",
+                                            "value": "250"
+                                        },
+                                        {
+                                            "label_en": "Aryaf Libya",
+                                            "label_ar": "أرياف ليبيا",
+                                            "value": "251"
+                                        },
+                                        {
+                                            "label_en": "Etisalat Libya",
+                                            "label_ar": "اتصالات ليبيا",
+                                            "value": "252"
+                                        },
+                                        {
+                                            "label_en": "Al-Najm Al-Dawli",
+                                            "label_ar": "شركة النجم الدولي للاتصالات وتقنية المعلومات",
+                                            "value": "253"
+                                        },
+                                        {
+                                            "label_en": "Rawafed Net Western Region",
+                                            "label_ar": "روافد نت المنطقة الغربية",
+                                            "value": "254"
+                                        },
+                                        {
+                                            "label_en": "Fly Net",
+                                            "label_ar": "فلاي نت",
+                                            "value": "255"
+                                        },
+                                        {
+                                            "label_en": "AdEx",
+                                            "label_ar": "ادكس",
+                                            "value": "256"
+                                        },
+                                        {
+                                            "label_en": "Hala Net",
+                                            "label_ar": "هلا نت",
+                                            "value": "257"
+                                        },
+                                        {
+                                            "label_en": "Al-Mawja Telecom",
+                                            "label_ar": "الموجة للاتصالات والتقنية",
+                                            "value": "258"
+                                        },
+                                        {
+                                            "label_en": "Al-Raya Telecom",
+                                            "label_ar": "الراية للاتصالات والتقنية المعلومات",
+                                            "value": "259"
+                                        },
+                                        {
+                                            "label_en": "Digital Cloud",
+                                            "label_ar": "السحابه الرقميه",
+                                            "value": "261"
+                                        },
+                                        {
+                                            "label_en": "Mega Net",
+                                            "label_ar": "ميغا نت",
+                                            "value": "262"
+                                        },
+                                        {
+                                            "label_en": "Rawafed Net Eastern Region",
+                                            "label_ar": "روافد نت المنطقة الشرقية",
+                                            "value": "263"
+                                        },
+                                        {
+                                            "label_en": "Taxista",
+                                            "label_ar": "تاكسيستا",
+                                            "value": "265"
+                                        },
+                                        {
+                                            "label_en": "Roya Internet",
+                                            "label_ar": "رؤى انترنت",
+                                            "value": "266"
+                                        },
+                                        {
+                                            "label_en": "Nasma Plus",
+                                            "label_ar": "نسمه بلس",
+                                            "value": "268"
+                                        },
+                                        {
+                                            "label_en": "G-Tech",
+                                            "label_ar": "جي تك",
+                                            "value": "269"
+                                        },
+                                        {
+                                            "label_en": "Nabd Al-Taqnia",
+                                            "label_ar": "نبض التقنية",
+                                            "value": "270"
+                                        },
+                                        {
+                                            "label_en": "High Class",
+                                            "label_ar": "هاي كلاس",
+                                            "value": "271"
+                                        },
+                                        {
+                                            "label_en": "Tawasul Net",
+                                            "label_ar": "تواصل نت",
+                                            "value": "272"
+                                        },
+                                        {
+                                            "label_en": "Al-Alamia Net",
+                                            "label_ar": "العالمية نت",
+                                            "value": "273"
+                                        },
+                                        {
+                                            "label_en": "Basma Net",
+                                            "label_ar": "بصمة نت",
+                                            "value": "274"
+                                        },
+                                        {
+                                            "label_en": "Tariq Al-Riyada",
+                                            "label_ar": "طريق الريادة",
+                                            "value": "275"
+                                        },
+                                        {
+                                            "label_en": "Net Cube",
+                                            "label_ar": "نت كيوب",
+                                            "value": "276"
+                                        },
+                                        {
+                                            "label_en": "Click Net",
+                                            "label_ar": "كليك نت",
+                                            "value": "277"
+                                        },
+                                        {
+                                            "label_en": "Swift Net",
+                                            "label_ar": "سويفت نت",
+                                            "value": "278"
+                                        },
+                                        {
+                                            "label_en": "Digital Generation",
+                                            "label_ar": "الجيل الرقمي",
+                                            "value": "279"
+                                        },
+                                        {
+                                            "label_en": "Al-Jawhara Al-Libiya",
+                                            "label_ar": "الجوهرة الليبية للإتصالات",
+                                            "value": "280"
+                                        },
+                                        {
+                                            "label_en": "Afaq Al-Tamayuz",
+                                            "label_ar": "أفاق التميز",
+                                            "value": "281"
+                                        },
+                                        {
+                                            "label_en": "Number Detector",
+                                            "label_ar": "كاشف الأرقام",
+                                            "value": "282"
+                                        },
+                                        {
+                                            "label_en": "Ajeer",
+                                            "label_ar": "أجير",
+                                            "value": "283"
+                                        },
+                                        {
+                                            "label_en": "Arrivo",
+                                            "label_ar": "أريفو",
+                                            "value": "284"
+                                        },
+                                        {
+                                            "label_en": "Shumou Plus Platform",
+                                            "label_ar": "منصة شموع بلس",
+                                            "value": "285"
+                                        },
+                                        {
+                                            "label_en": "Basma Educational Platform",
+                                            "label_ar": "منصة بصمة التعليمية",
+                                            "value": "286"
+                                        },
+                                        {
+                                            "label_en": "Al-Diqqa Telecom",
+                                            "label_ar": "الدقة للإتصالات و تقنية المعلومات",
+                                            "value": "287"
+                                        },
+                                        {
+                                            "label_en": "Al-Nour Al-Raed",
+                                            "label_ar": "النور الرائد",
+                                            "value": "288"
+                                        },
+                                        {
+                                            "label_en": "Blink",
+                                            "label_ar": "بلينك",
+                                            "value": "289"
+                                        },
+                                        {
+                                            "label_en": "Thuraya",
+                                            "label_ar": "ثريا",
+                                            "value": "301"
+                                        },
+                                        {
+                                            "label_en": "Steam US",
+                                            "label_ar": "ستيم امريكي",
+                                            "value": "302"
+                                        },
+                                        {
+                                            "label_en": "Nintendo US",
+                                            "label_ar": "نينتندو امريكي",
+                                            "value": "303"
+                                        },
+                                        {
+                                            "label_en": "Amazon US",
+                                            "label_ar": "امازون امريكي",
+                                            "value": "304"
+                                        },
+                                        {
+                                            "label_en": "Spotify US",
+                                            "label_ar": "سبوتيفاي امريكي",
+                                            "value": "305"
+                                        },
+                                        {
+                                            "label_en": "Netflix US",
+                                            "label_ar": "نتفلكس امريكي",
+                                            "value": "308"
+                                        },
+                                        {
+                                            "label_en": "PlayStation KSA",
+                                            "label_ar": "بلايستيشن سعودي",
+                                            "value": "311"
+                                        }
+                                    ]
+                                },
+                                {
+                                    "id": "value",
+                                    "label_en": "Value",
+                                    "label_ar": "القيمة",
+                                    "type": "text"
+                                }
+                            ]
+                        },
+                        {
+                            "id": "get_customer_number",
+                            "name_en": "Inquire about the customer number",
+                            "name_ar": "الاستعلام عن رقم الزبون",
+                            "smsNumber": "19000",
+                            "template": "{pin}*21",
+                            "fields": [
+                                {
+                                    "id": "pin",
+                                    "label_en": "PIN",
+                                    "label_ar": "الرقم السري",
+                                    "type": "text"
+                                }
+                            ]
+                        },
+                        {
+                            "id": "check_balance",
+                            "name_en": "Check balance",
+                            "name_ar": "الاستعلام عن الرصيد",
+                            "smsNumber": "19000",
+                            "template": "{pin}*1",
+                            "fields": [
+                                {
+                                    "id": "pin",
+                                    "label_en": "PIN",
+                                    "label_ar": "الرقم السري",
+                                    "type": "text"
+                                }
+                            ]
+                        },
+                        {
+                            "id": "change_pin",
+                            "name_en": "Change PIN",
+                            "name_ar": "تغيير الرقم السري",
+                            "smsNumber": "19000",
+                            "template": "{pin}*10*{new_pin}",
+                            "fields": [
+                                {
+                                    "id": "pin",
+                                    "label_en": "Old PIN",
+                                    "label_ar": "الرقم السري القديم",
+                                    "type": "text"
+                                },
+                                {
+                                    "id": "new_pin",
+                                    "label_en": "New PIN",
+                                    "label_ar": "الرقم السري الجديد",
+                                    "type": "text"
+                                }
+                            ]
+                        },
+                        {
+                            "id": "resend_last_message",
+                            "name_en": "Resend last message",
+                            "name_ar": "إعادة طلب آخر رسالة",
+                            "smsNumber": "19000",
+                            "template": "{pin}*0",
+                            "fields": [
+                                {
+                                    "id": "pin",
+                                    "label_en": "PIN",
+                                    "label_ar": "الرقم السري",
+                                    "type": "text"
+                                }
+                            ]
+                        },
+                        {
+                            "id": "get_iban",
+                            "name_en": "Get your IBAN",
+                            "name_ar": "التحصل علي رقم حسابك الدولي IBAN",
+                            "smsNumber": "19000",
+                            "template": "{pin}*20",
+                            "fields": [
+                                {
+                                    "id": "pin",
+                                    "label_en": "PIN",
+                                    "label_ar": "الرقم السري",
+                                    "type": "text"
+                                }
+                            ]
+                        }
+                    ]
                 }
             ]
         },
