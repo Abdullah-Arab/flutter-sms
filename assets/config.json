@@ -1,0 +1,31 @@
+{
+    "categories": [
+        {
+            "id": "banking",
+            "name_en": "Banking",
+            "name_ar": "خدمات مصرفية",
+            "vendors": [
+                {
+                    "id": "juran_bank",
+                    "name_en": "Juran Bank",
+                    "name_ar": "بنك جُران",
+                    "shortcode": "20002",
+                    "commands": [
+                        {
+                            "id": "balance",
+                            "name_en": "Check Balance",
+                            "name_ar": "الاستعلام عن الرصيد",
+                            "template": "Nub4 {account}"
+                        },
+                        {
+                            "id": "info",
+                            "name_en": "Account Info",
+                            "name_ar": "معلومات الحساب",
+                            "template": "Nub9 {account}*{ssn}*{phone}"
+                        }
+                    ]
+                }
+            ]
+        }
+    ]
+}
