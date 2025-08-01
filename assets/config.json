@@ -13,6 +13,93 @@
                     "description_ar": "خدمة الرسائل النصية تبقيك هده الخدمة على اطلاع دائم بكل حركات حسابك من ايداع وخصم. يتم الاشتراك تلقائياً عند فتح الحساب. يمكنك طلبها بإرسال رسالة إلى الرقم (20002) ويمكن اختيار لغة عرض الرسائل كالتالي.",
                     "actions": [
                         {
+                            "id": "open_account",
+                            "name_en": "Open Account",
+                            "name_ar": "فتح الحساب",
+                            "smsNumber": "20002",
+                            "template": "Nub*{ssn}*{passport}*{branch}*{accountType}",
+                            "fields": [
+                                {
+                                    "id": "accountType",
+                                    "label_en": "Account Type",
+                                    "label_ar": "نوع الحساب",
+                                    "type": "dropdown",
+                                    "options": [
+                                        {
+                                            "label_en": "Ekhtroni Rkz",
+                                            "label_ar": "حساب إلكتروني ركاز",
+                                            "value": "01"
+                                        },
+                                        {
+                                            "label_en": "Current Account",
+                                            "label_ar": "حساب جاري",
+                                            "value": "02"
+                                        },
+                                        {
+                                            "label_en": "Student Account",
+                                            "label_ar": "حساب طالب",
+                                            "value": "03"
+                                        },
+                                        {
+                                            "label_en": "Visa Account",
+                                            "label_ar": "حساب فيزا نت",
+                                            "value": "04"
+                                        }
+                                    ]
+                                },
+                                {
+                                    "id": "branch",
+                                    "label_en": "Branch",
+                                    "label_ar": "الفرع",
+                                    "type": "dropdown",
+                                    "options": [
+                                        {
+                                            "label_en": "Tripoli Tower",
+                                            "label_ar": "فرع برج طرابلس",
+                                            "value": "01"
+                                        },
+                                        {
+                                            "label_en": "Souq al-Juma",
+                                            "label_ar": "وكالة المدار/سوق الجمعة",
+                                            "value": "03"
+                                        },
+                                        {
+                                            "label_en": "Zawiya Dahmani",
+                                            "label_ar": "فرع زاوية الدهماني",
+                                            "value": "05"
+                                        },
+                                        {
+                                            "label_en": "Tourism Branch",
+                                            "label_ar": "فرع السياحية",
+                                            "value": "06"
+                                        },
+                                        {
+                                            "label_en": "Mishtal Branch",
+                                            "label_ar": "فرع المشتل",
+                                            "value": "07"
+                                        },
+                                        {
+                                            "label_en": "Msrata Branch",
+                                            "label_ar": "فرع مصراتة",
+                                            "value": "51"
+                                        }
+                                    ]
+                                },
+                                {
+                                    "id": "passport",
+                                    "label_en": "Passport No.",
+                                    "label_ar": "رقم جواز السفر",
+                                    "type": "text"
+                                },
+                                {
+                                    "id": "ssn",
+                                    "label_en": "National ID",
+                                    "label_ar": "الرقم الوطني",
+                                    "type": "text"
+                                }
+                            ]
+                        },
+                        {
                             "id": "subscribe",
                             "name_en": "Subscribe SMS Service",
                             "name_ar": "الاشتراك في خدمة الرسائل",
