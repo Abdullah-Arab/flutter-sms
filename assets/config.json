@@ -549,7 +549,272 @@
             "id": "telecom",
             "name_en": "Telecom",
             "name_ar": "الاتصالات",
-            "providers": []
+            "providers": [
+                {
+                    "id": "ltt",
+                    "name_en": "Libya Telecom & Technology",
+                    "name_ar": "ليبيا للاتصالات والتقنية",
+                    "description_en": "SMS service to manage your LTT 4G account. Send an SMS to 11611 with the following formats.",
+                    "description_ar": "خدمة الرسائل النصية لإدارة حساب 4G الخاص بك من شركة ليبيا للاتصالات والتقنية. أرسل رسالة نصية إلى 11611 بالتنسيقات التالية.",
+                    "actions": [
+                        {
+                            "id": "check_account_status",
+                            "name_en": "Check account status",
+                            "name_ar": "الاطلاع على حالة الحساب",
+                            "smsNumber": "11611",
+                            "template": "0#{service_number}#{pin}",
+                            "fields": [
+                                {
+                                    "id": "service_number",
+                                    "label_en": "Service Number",
+                                    "label_ar": "رقم الخدمة",
+                                    "type": "text"
+                                },
+                                {
+                                    "id": "pin",
+                                    "label_en": "PIN",
+                                    "label_ar": "الرقم السري",
+                                    "type": "text"
+                                }
+                            ]
+                        },
+                        {
+                            "id": "recharge_balance",
+                            "name_en": "Recharge Balance",
+                            "name_ar": "تعبئة الرصيد",
+                            "smsNumber": "11611",
+                            "template": "1#{service_number}#{pin}#{prepaid_card_pin}",
+                            "fields": [
+                                {
+                                    "id": "service_number",
+                                    "label_en": "Service Number",
+                                    "label_ar": "رقم الخدمة",
+                                    "type": "text"
+                                },
+                                {
+                                    "id": "pin",
+                                    "label_en": "PIN",
+                                    "label_ar": "الرقم السري",
+                                    "type": "text"
+                                },
+                                {
+                                    "id": "prepaid_card_pin",
+                                    "label_en": "Prepaid Card PIN",
+                                    "label_ar": "الرقم السري لبطاقة الدفع المسبق",
+                                    "type": "text"
+                                }
+                            ]
+                        },
+                        {
+                            "id": "request_additional_quota",
+                            "name_en": "Request Additional Quota",
+                            "name_ar": "طلبة حصة إضافية",
+                            "smsNumber": "11611",
+                            "template": "2#{service_number}#{pin}#{quota}",
+                            "fields": [
+                                {
+                                    "id": "service_number",
+                                    "label_en": "Service Number",
+                                    "label_ar": "رقم الخدمة",
+                                    "type": "text"
+                                },
+                                {
+                                    "id": "pin",
+                                    "label_en": "PIN",
+                                    "label_ar": "الرقم السري",
+                                    "type": "text"
+                                },
+                                {
+                                    "id": "quota",
+                                    "label_en": "Additional Quota (GB)",
+                                    "label_ar": "مقدار الحصة الإضافية (قيقا)",
+                                    "type": "dropdown",
+                                    "options": [
+                                        {
+                                            "label_en": "1 GB",
+                                            "label_ar": "1 قيقا",
+                                            "value": "1"
+                                        },
+                                        {
+                                            "label_en": "2 GB",
+                                            "label_ar": "2 قيقا",
+                                            "value": "2"
+                                        },
+                                        {
+                                            "label_en": "3 GB",
+                                            "label_ar": "3 قيقا",
+                                            "value": "3"
+                                        },
+                                        {
+                                            "label_en": "4 GB",
+                                            "label_ar": "4 قيقا",
+                                            "value": "4"
+                                        },
+                                        {
+                                            "label_en": "5 GB",
+                                            "label_ar": "5 قيقا",
+                                            "value": "5"
+                                        }
+                                    ]
+                                }
+                            ]
+                        },
+                        {
+                            "id": "reset_password",
+                            "name_en": "Reset Password",
+                            "name_ar": "إعادة تعيين كلمة المرور",
+                            "smsNumber": "11611",
+                            "template": "3#{service_number}#{pin}",
+                            "fields": [
+                                {
+                                    "id": "service_number",
+                                    "label_en": "Service Number",
+                                    "label_ar": "رقم الخدمة",
+                                    "type": "text"
+                                },
+                                {
+                                    "id": "pin",
+                                    "label_en": "PIN",
+                                    "label_ar": "الرقم السري",
+                                    "type": "text"
+                                }
+                            ]
+                        },
+                        {
+                            "id": "change_pin",
+                            "name_en": "Change PIN",
+                            "name_ar": "تغيير الرقم السري",
+                            "smsNumber": "11611",
+                            "template": "4#{service_number}#{pin}#{new_pin}",
+                            "fields": [
+                                {
+                                    "id": "service_number",
+                                    "label_en": "Service Number",
+                                    "label_ar": "رقم الخدمة",
+                                    "type": "text"
+                                },
+                                {
+                                    "id": "pin",
+                                    "label_en": "Old PIN",
+                                    "label_ar": "الرقم السري القديم",
+                                    "type": "text"
+                                },
+                                {
+                                    "id": "new_pin",
+                                    "label_en": "New PIN",
+                                    "label_ar": "الرقم السري الجديد",
+                                    "type": "text"
+                                }
+                            ]
+                        },
+                        {
+                            "id": "stop_auto_renewal",
+                            "name_en": "Stop Automatic Monthly Renewal",
+                            "name_ar": "إيقاف التجديد الشهري التلقائي",
+                            "smsNumber": "11611",
+                            "template": "5#{service_number}#{pin}",
+                            "fields": [
+                                {
+                                    "id": "service_number",
+                                    "label_en": "Service Number",
+                                    "label_ar": "رقم الخدمة",
+                                    "type": "text"
+                                },
+                                {
+                                    "id": "pin",
+                                    "label_en": "PIN",
+                                    "label_ar": "الرقم السري",
+                                    "type": "text"
+                                }
+                            ]
+                        },
+                        {
+                            "id": "activate_auto_renewal",
+                            "name_en": "Activate Automatic Monthly Renewal",
+                            "name_ar": "تفعيل التجديد الشهري التلقائي",
+                            "smsNumber": "11611",
+                            "template": "6#{service_number}#{pin}",
+                            "fields": [
+                                {
+                                    "id": "service_number",
+                                    "label_en": "Service Number",
+                                    "label_ar": "رقم الخدمة",
+                                    "type": "text"
+                                },
+                                {
+                                    "id": "pin",
+                                    "label_en": "PIN",
+                                    "label_ar": "الرقم السري",
+                                    "type": "text"
+                                }
+                            ]
+                        },
+                        {
+                            "id": "report_lost_account",
+                            "name_en": "Report Lost Account",
+                            "name_ar": "الإبلاغ عن ضياع الحساب",
+                            "smsNumber": "11611",
+                            "template": "7#{service_number}#{pin}",
+                            "fields": [
+                                {
+                                    "id": "service_number",
+                                    "label_en": "Service Number",
+                                    "label_ar": "رقم الخدمة",
+                                    "type": "text"
+                                },
+                                {
+                                    "id": "pin",
+                                    "label_en": "PIN",
+                                    "label_ar": "الرقم السري",
+                                    "type": "text"
+                                }
+                            ]
+                        },
+                        {
+                            "id": "cancel_lost_account_report",
+                            "name_en": "Cancel Lost Account Report",
+                            "name_ar": "إلغاء الإبلاغ عن ضياع الحساب",
+                            "smsNumber": "11611",
+                            "template": "8#{service_number}#{pin}",
+                            "fields": [
+                                {
+                                    "id": "service_number",
+                                    "label_en": "Service Number",
+                                    "label_ar": "رقم الخدمة",
+                                    "type": "text"
+                                },
+                                {
+                                    "id": "pin",
+                                    "label_en": "PIN",
+                                    "label_ar": "الرقم السري",
+                                    "type": "text"
+                                }
+                            ]
+                        },
+                        {
+                            "id": "renew_package",
+                            "name_en": "Renew Package",
+                            "name_ar": "تجديد الباقة",
+                            "smsNumber": "11611",
+                            "template": "9#{service_number}#{pin}",
+                            "fields": [
+                                {
+                                    "id": "service_number",
+                                    "label_en": "Service Number",
+                                    "label_ar": "رقم الخدمة",
+                                    "type": "text"
+                                },
+                                {
+                                    "id": "pin",
+                                    "label_en": "PIN",
+                                    "label_ar": "الرقم السري",
+                                    "type": "text"
+                                }
+                            ]
+                        }
+                    ]
+                }
+            ]
         }
     ]
 }
