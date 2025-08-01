@@ -154,6 +154,301 @@
                             ]
                         }
                     ]
+                },
+                {
+                    "id": "jumhouria",
+                    "name_en": "Jumhouria Bank",
+                    "name_ar": "مصرف الجمهورية",
+                    "smsNumber": "16016",
+                    "actions": [
+                        {
+                            "id": "reactivate_app",
+                            "name_en": "Reactivate MyPlus App",
+                            "name_ar": "إعادة تفعيل MyPlus",
+                            "smsNumber": "16016",
+                            "template": "70",
+                            "fields": [
+                                {
+                                    "id": "pin",
+                                    "label_en": "PIN",
+                                    "label_ar": "الرقم السري",
+                                    "type": "text"
+                                }
+                            ]
+                        },
+                        {
+                            "id": "latest_salary",
+                            "name_en": "Latest Salary",
+                            "name_ar": "آخر مرتب في حسابك من تاريخ اشتراكك",
+                            "smsNumber": "16016",
+                            "template": "{pin}*1",
+                            "fields": [
+                                {
+                                    "id": "pin",
+                                    "label_en": "PIN",
+                                    "label_ar": "الرقم السري",
+                                    "type": "text"
+                                }
+                            ]
+                        },
+                        {
+                            "id": "account_statement_3",
+                            "name_en": "Account Statement Last 3",
+                            "name_ar": "كشف حساب بآخر ثلاث حركات",
+                            "smsNumber": "16016",
+                            "template": "{pin}*2",
+                            "fields": [
+                                {
+                                    "id": "pin",
+                                    "label_en": "PIN",
+                                    "label_ar": "الرقم السري",
+                                    "type": "text"
+                                }
+                            ]
+                        },
+                        {
+                            "id": "current_balance",
+                            "name_en": "Current Balance",
+                            "name_ar": "رصيدك الحالي",
+                            "smsNumber": "16016",
+                            "template": "{pin}*3",
+                            "fields": [
+                                {
+                                    "id": "pin",
+                                    "label_en": "PIN",
+                                    "label_ar": "الرقم السري",
+                                    "type": "text"
+                                }
+                            ]
+                        },
+                        {
+                            "id": "last3_debits",
+                            "name_en": "Last 3 Debits",
+                            "name_ar": "آخر ثلاث حركات خصم",
+                            "smsNumber": "16016",
+                            "template": "{pin}*5",
+                            "fields": [
+                                {
+                                    "id": "pin",
+                                    "label_en": "PIN",
+                                    "label_ar": "الرقم السري",
+                                    "type": "text"
+                                }
+                            ]
+                        },
+                        {
+                            "id": "last3_credits",
+                            "name_en": "Last 3 Credits",
+                            "name_ar": "آخر ثلاث حركات إضافة",
+                            "smsNumber": "16016",
+                            "template": "{pin}*6",
+                            "fields": [
+                                {
+                                    "id": "pin",
+                                    "label_en": "PIN",
+                                    "label_ar": "الرقم السري",
+                                    "type": "text"
+                                }
+                            ]
+                        },
+                        {
+                            "id": "sell_rates_j",
+                            "name_en": "Sell Rates",
+                            "name_ar": "أسعار بيع العملات",
+                            "smsNumber": "16016",
+                            "template": "{pin}*7",
+                            "fields": [
+                                {
+                                    "id": "pin",
+                                    "label_en": "PIN",
+                                    "label_ar": "الرقم السري",
+                                    "type": "text"
+                                }
+                            ]
+                        },
+                        {
+                            "id": "buy_rates_j",
+                            "name_en": "Buy Rates",
+                            "name_ar": "أسعار شراء العملات",
+                            "smsNumber": "16016",
+                            "template": "{pin}*8",
+                            "fields": [
+                                {
+                                    "id": "pin",
+                                    "label_en": "PIN",
+                                    "label_ar": "الرقم السري",
+                                    "type": "text"
+                                }
+                            ]
+                        },
+                        {
+                            "id": "exclude_charge_last3",
+                            "name_en": "Last 3 Without Charges",
+                            "name_ar": "آخر ثلاث حركات بالاستثناء عمليات الخصم على كروت الشحن",
+                            "smsNumber": "16016",
+                            "template": "{pin}*9",
+                            "fields": [
+                                {
+                                    "id": "pin",
+                                    "label_en": "PIN",
+                                    "label_ar": "الرقم السري",
+                                    "type": "text"
+                                }
+                            ]
+                        },
+                        {
+                            "id": "change_pin_j",
+                            "name_en": "Change PIN",
+                            "name_ar": "تغيير الرقم السري الخاص بك إلى رقم جديد",
+                            "smsNumber": "16016",
+                            "template": "{pin}*12*{newPin}",
+                            "fields": [
+                                {
+                                    "id": "pin",
+                                    "label_en": "Old PIN",
+                                    "label_ar": "الرقم السري",
+                                    "type": "text"
+                                },
+                                {
+                                    "id": "newPin",
+                                    "label_en": "New PIN",
+                                    "label_ar": "الرقم السري الجديد",
+                                    "type": "text"
+                                }
+                            ]
+                        },
+                        {
+                            "id": "order_chequebook_j",
+                            "name_en": "Order Chequebook",
+                            "name_ar": "طلب تجهيز دفتر صكوك",
+                            "smsNumber": "16016",
+                            "template": "{pin}*13",
+                            "fields": [
+                                {
+                                    "id": "pin",
+                                    "label_en": "PIN",
+                                    "label_ar": "الرقم السري",
+                                    "type": "text"
+                                }
+                            ]
+                        },
+                        {
+                            "id": "buy_card_madar_j",
+                            "name_en": "Buy Madar Card",
+                            "name_ar": "طلب شراء كرت شحن هاتف شركة المدار الجديد",
+                            "smsNumber": "16016",
+                            "template": "{pin}*31*{value}",
+                            "fields": [
+                                {
+                                    "id": "value",
+                                    "label_en": "Card Value",
+                                    "label_ar": "قيمة الكرت",
+                                    "type": "text"
+                                },
+                                {
+                                    "id": "pin",
+                                    "label_en": "PIN",
+                                    "label_ar": "الرقم السري",
+                                    "type": "dropdown",
+                                    "options": [
+                                        {
+                                            "label_en": "3",
+                                            "label_ar": "3",
+                                            "value": "3"
+                                        },
+                                        {
+                                            "label_en": "5",
+                                            "label_ar": "5",
+                                            "value": "5"
+                                        },
+                                        {
+                                            "label_en": "10",
+                                            "label_ar": "10",
+                                            "value": "10"
+                                        },
+                                        {
+                                            "label_en": "20",
+                                            "label_ar": "20",
+                                            "value": "20"
+                                        },
+                                        {
+                                            "label_en": "40",
+                                            "label_ar": "40",
+                                            "value": "40"
+                                        },
+                                        {
+                                            "label_en": "100",
+                                            "label_ar": "100",
+                                            "value": "100"
+                                        }
+                                    ]
+                                }
+                            ]
+                        },
+                        {
+                            "id": "buy_card_libyana_j",
+                            "name_en": "Buy Libyana Card",
+                            "name_ar": "طلب شراء كرت شحن هاتف شركة ليبانا",
+                            "smsNumber": "16016",
+                            "template": "{pin}*32*{value}",
+                            "fields": [
+                                {
+                                    "id": "value",
+                                    "label_en": "Card Value",
+                                    "label_ar": "قيمة الكرت",
+                                    "type": "text"
+                                },
+                                {
+                                    "id": "pin",
+                                    "label_en": "PIN",
+                                    "label_ar": "الرقم السري",
+                                    "type": "text"
+                                }
+                            ]
+                        },
+                        {
+                            "id": "buy_internet_card_j",
+                            "name_en": "Buy Internet Card",
+                            "name_ar": "طلب شراء كرت إنترنت",
+                            "smsNumber": "16016",
+                            "template": "{pin}*33*{value}",
+                            "fields": [
+                                {
+                                    "id": "value",
+                                    "label_en": "Card Value",
+                                    "label_ar": "قيمة الكرت",
+                                    "type": "text"
+                                },
+                                {
+                                    "id": "pin",
+                                    "label_en": "PIN",
+                                    "label_ar": "الرقم السري",
+                                    "type": "text"
+                                }
+                            ]
+                        },
+                        {
+                            "id": "buy_landline_card_j",
+                            "name_en": "Buy Landline Card",
+                            "name_ar": "طلب شراء كرت هاتف أرضي",
+                            "smsNumber": "16016",
+                            "template": "{pin}*34*{value}",
+                            "fields": [
+                                {
+                                    "id": "value",
+                                    "label_en": "Card Value",
+                                    "label_ar": "قيمة الكرت",
+                                    "type": "text"
+                                },
+                                {
+                                    "id": "pin",
+                                    "label_en": "PIN",
+                                    "label_ar": "الرقم السري",
+                                    "type": "text"
+                                }
+                            ]
+                        }
+                    ]
                 }
             ]
         },
