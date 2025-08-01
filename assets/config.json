@@ -536,6 +536,90 @@
                             ]
                         }
                     ]
+                },
+                {
+                    "id": "yaqeen",
+                    "name_en": "Yaqeen Bank",
+                    "name_ar": "مصرف اليقين",
+                    "description_en": "You can perform various operations with ease by sending a text message to 19919 (Libyana or Almadar Aljadeed) containing one of the following codes from left to right. [2]",
+                    "description_ar": "يمكنكم إجراء العمليات المختلفة بكل سهولة ويسر عبر إرسال رسالة نصية إلى 19919 (ليبيانا أو المدار الجديد) تحتوي على أحد الأكواد التالية من اليسار إلى اليمين: [2]",
+                    "actions": [
+                        {
+                            "id": "update_account_info",
+                            "name_en": "Update bank account information",
+                            "name_ar": "تحديث معلومات الحساب المصرفي",
+                            "smsNumber": "19919",
+                            "template": "55*{account}*{ssn}*{passport}",
+                            "fields": [
+                                {
+                                    "id": "account",
+                                    "label_en": "Account Number",
+                                    "label_ar": "رقم الحساب",
+                                    "type": "text"
+                                },
+                                {
+                                    "id": "ssn",
+                                    "label_en": "National ID",
+                                    "label_ar": "الرقم الوطني",
+                                    "type": "text"
+                                },
+                                {
+                                    "id": "passport",
+                                    "label_en": "Passport Number",
+                                    "label_ar": "رقم جواز السفر",
+                                    "type": "text"
+                                }
+                            ]
+                        },
+                        {
+                            "id": "get_iban",
+                            "name_en": "Know IBAN Number",
+                            "name_ar": "معرفة رقم IBAN",
+                            "smsNumber": "19919",
+                            "template": "66*{account}*{ssn}",
+                            "fields": [
+                                {
+                                    "id": "account",
+                                    "label_en": "Account Number",
+                                    "label_ar": "رقم الحساب",
+                                    "type": "text"
+                                },
+                                {
+                                    "id": "ssn",
+                                    "label_en": "National ID",
+                                    "label_ar": "الرقم الوطني",
+                                    "type": "text"
+                                }
+                            ]
+                        },
+                        {
+                            "id": "update_international_card",
+                            "name_en": "Update International Personal Use Card",
+                            "name_ar": "تحديث البطاقة الدولية المخصصة للاستخدام الشخصي",
+                            "smsNumber": "19919",
+                            "template": "77*{account}*{ssn}*{card_number}",
+                            "fields": [
+                                {
+                                    "id": "account",
+                                    "label_en": "Account Number",
+                                    "label_ar": "رقم الحساب",
+                                    "type": "text"
+                                },
+                                {
+                                    "id": "ssn",
+                                    "label_en": "National ID",
+                                    "label_ar": "الرقم الوطني",
+                                    "type": "text"
+                                },
+                                {
+                                    "id": "card_number",
+                                    "label_en": "Card Number",
+                                    "label_ar": "رقم البطاقة",
+                                    "type": "text"
+                                }
+                            ]
+                        }
+                    ]
                 }
             ]
         },
