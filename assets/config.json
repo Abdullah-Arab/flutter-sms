@@ -620,6 +620,162 @@
                             ]
                         }
                     ]
+                },
+                {
+                    "id": "ncb",
+                    "name_en": "National Commercial Bank",
+                    "name_ar": "المصرف التجاري الوطني",
+                    "description_en": "The National Commercial Bank offers an SMS service for its customers to obtain all information/notifications related to their account transactions as they happen, inquire about account balances, last transactions, or transfer between personal accounts. To subscribe, you must visit your branch to fill out the form. The annual subscription fee is 24 LYD. Send an SMS to 19019 to get your bank account details.",
+                    "description_ar": "يقدم المصرف التجاري الوطني خدمة الرسائل القصيرة SMS لعملائه الكرام وذلك للحصول على جميع المعلومات / الإشعارات المتعلقة بحركات حساباتهم فور حدوثها وللاستعلام عن أرصدة الحسابات وآخر الحركات التي تمت على الحساب او التحويل بين الحسابات الشخصية في المصرف. للاشتراك، يجب التوجه إلى فرعك لتعبئة النموذج. رسوم الاشتراك السنوي 24 ديناراً. أرسل رسالة نصية إلى الرقم 19019 للحصول على تفاصيل حسابك المصرفي. [2]",
+                    "actions": [
+                        {
+                            "id": "latest_salary",
+                            "name_en": "Your last salary since your subscription date",
+                            "name_ar": "آخر مرتب من حسابك من تاريخ اشتراكك",
+                            "smsNumber": "19019",
+                            "template": "{pin}*1",
+                            "fields": [
+                                {
+                                    "id": "pin",
+                                    "label_en": "PIN",
+                                    "label_ar": "الرقم السري",
+                                    "type": "text"
+                                }
+                            ]
+                        },
+                        {
+                            "id": "mini_statement",
+                            "name_en": "Account statement with the last three transactions",
+                            "name_ar": "كشف حساب بأخر ثلاثة حركات",
+                            "smsNumber": "19019",
+                            "template": "{pin}*2",
+                            "fields": [
+                                {
+                                    "id": "pin",
+                                    "label_en": "PIN",
+                                    "label_ar": "الرقم السري",
+                                    "type": "text"
+                                }
+                            ]
+                        },
+                        {
+                            "id": "current_balance",
+                            "name_en": "Your current balance",
+                            "name_ar": "رصيدك الحالي",
+                            "smsNumber": "19019",
+                            "template": "{pin}*3",
+                            "fields": [
+                                {
+                                    "id": "pin",
+                                    "label_en": "PIN",
+                                    "label_ar": "الرقم السري",
+                                    "type": "text"
+                                }
+                            ]
+                        },
+                        {
+                            "id": "last_three_debits",
+                            "name_en": "Last three debit transactions",
+                            "name_ar": "أخر ثلاثة حركات خصم",
+                            "smsNumber": "19019",
+                            "template": "{pin}*5",
+                            "fields": [
+                                {
+                                    "id": "pin",
+                                    "label_en": "PIN",
+                                    "label_ar": "الرقم السري",
+                                    "type": "text"
+                                }
+                            ]
+                        },
+                        {
+                            "id": "last_three_credits",
+                            "name_en": "Last three credit transactions",
+                            "name_ar": "أخر ثلاثة حركات إضافة",
+                            "smsNumber": "19019",
+                            "template": "{pin}*6",
+                            "fields": [
+                                {
+                                    "id": "pin",
+                                    "label_en": "PIN",
+                                    "label_ar": "الرقم السري",
+                                    "type": "text"
+                                }
+                            ]
+                        },
+                        {
+                            "id": "currency_selling_rates",
+                            "name_en": "Currency selling rates",
+                            "name_ar": "أسعار بيع العملات",
+                            "smsNumber": "19019",
+                            "template": "{pin}*7",
+                            "fields": [
+                                {
+                                    "id": "pin",
+                                    "label_en": "PIN",
+                                    "label_ar": "الرقم السري",
+                                    "type": "text"
+                                }
+                            ]
+                        },
+                        {
+                            "id": "currency_buying_rates",
+                            "name_en": "Currency buying rates",
+                            "name_ar": "أسعار شراء العملات",
+                            "smsNumber": "19019",
+                            "template": "{pin}*8",
+                            "fields": [
+                                {
+                                    "id": "pin",
+                                    "label_en": "PIN",
+                                    "label_ar": "الرقم السري",
+                                    "type": "text"
+                                }
+                            ]
+                        },
+                        {
+                            "id": "request_chequebook",
+                            "name_en": "Request to issue a chequebook",
+                            "name_ar": "طلب إصدار دفتر صكوك",
+                            "smsNumber": "19019",
+                            "template": "{pin}*9",
+                            "fields": [
+                                {
+                                    "id": "pin",
+                                    "label_en": "PIN",
+                                    "label_ar": "الرقم السري",
+                                    "type": "text"
+                                }
+                            ]
+                        },
+                        {
+                            "id": "monthly_statement",
+                            "name_en": "Monthly account statement",
+                            "name_ar": "كشف الحساب شهري فقط",
+                            "smsNumber": "19019",
+                            "template": "{pin}*22*{month}*{year}",
+                            "fields": [
+                                {
+                                    "id": "pin",
+                                    "label_en": "PIN",
+                                    "label_ar": "الرقم السري",
+                                    "type": "text"
+                                },
+                                {
+                                    "id": "month",
+                                    "label_en": "Month",
+                                    "label_ar": "الشهر",
+                                    "type": "text"
+                                },
+                                {
+                                    "id": "year",
+                                    "label_en": "Year",
+                                    "label_ar": "السنة",
+                                    "type": "text"
+                                }
+                            ]
+                        }
+                    ]
                 }
             ]
         },
