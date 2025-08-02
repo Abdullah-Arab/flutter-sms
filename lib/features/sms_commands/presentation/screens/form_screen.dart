@@ -1,7 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
 import 'package:auto_route/auto_route.dart';
-import '../../../../core/di/injection.dart';
 import '../../logic/sms_commands_cubit.dart';
 import '../../logic/sms_commands_state.dart';
 import '../widgets/dynamic_form.dart';
@@ -12,7 +11,7 @@ class FormScreen extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    final cubit = getIt<SmsCommandsCubit>();
+    final cubit = context.read<SmsCommandsCubit>();
 
     return BlocBuilder<SmsCommandsCubit, SmsCommandsState>(
       bloc: cubit,

@@ -1,6 +1,5 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
-import '../../../../core/di/injection.dart';
 import '../../logic/sms_commands_cubit.dart';
 import '../../models/input_field.dart';
 
@@ -81,7 +80,7 @@ class _DynamicFormState extends State<DynamicForm> {
             onPressed: () {
               if (_formKey.currentState!.validate()) {
                 _formKey.currentState!.save();
-                final cubit = getIt<SmsCommandsCubit>();
+                final cubit = context.read<SmsCommandsCubit>();
                 _values.forEach((key, value) {
                   cubit.updateFormValue(key, value);
                 });

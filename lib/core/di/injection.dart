@@ -11,7 +11,7 @@ Future<void> setupInjection() async {
   getIt.registerLazySingleton<ConfigService>(() => ConfigService());
 
   // Cubits
-  getIt.registerFactory<SmsCommandsCubit>(
+  getIt.registerLazySingleton<SmsCommandsCubit>(
     () => SmsCommandsCubit(getIt<ConfigService>()),
   );
 }

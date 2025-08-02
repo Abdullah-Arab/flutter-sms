@@ -1,7 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
 import 'package:auto_route/auto_route.dart';
-import '../../../../core/di/injection.dart';
 import '../../../../core/routing/app_router.dart';
 import '../../logic/sms_commands_cubit.dart';
 import '../../logic/sms_commands_state.dart';
@@ -13,7 +12,7 @@ class CategoryListScreen extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    final cubit = getIt<SmsCommandsCubit>();
+    final cubit = context.read<SmsCommandsCubit>();
 
     return Scaffold(
       appBar: AppBar(title: const Text('Select Category')),
@@ -37,7 +36,13 @@ class CategoryListScreen extends StatelessWidget {
                 return CategoryListItem(
                   category: category,
                   onTap: () {
+                    print(
+                      'Selecting category: ${category.nameEn}',
+                    ); // Debug print
                     cubit.selectCategory(category);
+                    print(
+                      'Category selected, navigating to provider list',
+                    ); // Debug print
                     context.router.push(const ProviderListRoute());
                   },
                 );
