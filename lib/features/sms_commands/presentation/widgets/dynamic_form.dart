@@ -38,6 +38,14 @@ class _DynamicFormState extends State<DynamicForm> {
                     }
                     return null;
                   },
+                  onChanged: (value) {
+                    if (value != null) {
+                      _values[field.id] = value;
+                      // Update form values in real-time
+                      final cubit = context.read<SmsCommandsCubit>();
+                      cubit.updateFormValue(field.id, value);
+                    }
+                  },
                   onSaved: (value) {
                     if (value != null) {
                       _values[field.id] = value;
@@ -67,6 +75,9 @@ class _DynamicFormState extends State<DynamicForm> {
                   onChanged: (value) {
                     if (value != null) {
                       _values[field.id] = value;
+                      // Update form values in real-time
+                      final cubit = context.read<SmsCommandsCubit>();
+                      cubit.updateFormValue(field.id, value);
                     }
                   },
                 );
@@ -80,14 +91,10 @@ class _DynamicFormState extends State<DynamicForm> {
             onPressed: () {
               if (_formKey.currentState!.validate()) {
                 _formKey.currentState!.save();
-                final cubit = context.read<SmsCommandsCubit>();
-                _values.forEach((key, value) {
-                  cubit.updateFormValue(key, value);
-                });
                 widget.onSubmit();
               }
             },
-            child: const Text('Submit'),
+            child: const Text('Send SMS'),
           ),
         ],
       ),

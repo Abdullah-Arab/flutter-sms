@@ -1,4 +1,5 @@
 import 'package:flutter_bloc/flutter_bloc.dart';
+import 'package:url_launcher/url_launcher.dart';
 import '../../../../core/services/config_service.dart';
 import '../models/category.dart';
 import '../models/service_provider.dart';
@@ -69,5 +70,47 @@ class SmsCommandsCubit extends Cubit<SmsCommandsState> {
       final currentState = state as SmsCommandsLoaded;
       emit(currentState.copyWith(formValues: const {}));
     }
+  }
+
+  Future<bool> sendSms() async {
+    if (state is SmsCommandsLoaded) {
+      final currentState = state as SmsCommandsLoaded;
+      final selectedAction = currentState.selectedAction;
+      final formValues = currentState.formValues;
+
+      if (selectedAction == null) {
+        print('No action selected');
+        return false;
+      }
+
+      try {
+        // Generate SMS message from template
+        String message = selectedAction.template;
+        formValues.forEach((key, value) {
+          message = message.replaceAll('{$key}', value);
+        });
+
+        print('Generated SMS message: $message');
+        print('SMS Number: ${selectedAction.smsNumber}');
+
+        // Create SMS URL
+        final uri = Uri(
+          scheme: 'sms',
+          path: selectedAction.smsNumber,
+          queryParameters: {'body': message},
+        );
+
+        print('SMS URI: $uri');
+
+        // Launch SMS app
+        final launched = await launchUrl(uri);
+        print('SMS app launched: $launched');
+        return launched;
+      } catch (e) {
+        print('Error sending SMS: $e');
+        return false;
+      }
+    }
+    return false;
   }
 }

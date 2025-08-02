@@ -23,18 +23,67 @@ class FormScreen extends StatelessWidget {
                   ? state.selectedAction!.nameAr
                   : state.selectedAction!.nameEn;
 
+          // Generate preview message
+          String previewMessage = state.selectedAction!.template;
+          state.formValues.forEach((key, value) {
+            previewMessage = previewMessage.replaceAll('{$key}', value);
+          });
+
           return Scaffold(
             appBar: AppBar(title: Text(title)),
             body: Padding(
               padding: const EdgeInsets.all(16),
-              child: DynamicForm(
-                fields: state.selectedAction!.fields,
-                onSubmit: () {
-                  // Handle form submission (simplified for now)
-                  ScaffoldMessenger.of(context).showSnackBar(
-                    const SnackBar(content: Text('Form submitted!')),
-                  );
-                },
+              child: Column(
+                crossAxisAlignment: CrossAxisAlignment.start,
+                children: [
+                  // SMS Preview
+                  if (state.formValues.isNotEmpty) ...[
+                    Card(
+                      child: Padding(
+                        padding: const EdgeInsets.all(16),
+                        child: Column(
+                          crossAxisAlignment: CrossAxisAlignment.start,
+                          children: [
+                            Text(
+                              'SMS Preview:',
+                              style: Theme.of(context).textTheme.titleMedium,
+                            ),
+                            const SizedBox(height: 8),
+                            Text('To: ${state.selectedAction!.smsNumber}'),
+                            const SizedBox(height: 4),
+                            Text('Message: $previewMessage'),
+                          ],
+                        ),
+                      ),
+                    ),
+                    const SizedBox(height: 16),
+                  ],
+                  // Form
+                  Expanded(
+                    child: DynamicForm(
+                      fields: state.selectedAction!.fields,
+                      onSubmit: () async {
+                        // Send SMS
+                        final success = await cubit.sendSms();
+                        if (success) {
+                          ScaffoldMessenger.of(context).showSnackBar(
+                            const SnackBar(
+                              content: Text('SMS app opened successfully!'),
+                              backgroundColor: Colors.green,
+                            ),
+                          );
+                        } else {
+                          ScaffoldMessenger.of(context).showSnackBar(
+                            const SnackBar(
+                              content: Text('Failed to open SMS app'),
+                              backgroundColor: Colors.red,
+                            ),
+                          );
+                        }
+                      },
+                    ),
+                  ),
+                ],
               ),
             ),
           );
