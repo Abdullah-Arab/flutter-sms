@@ -256,6 +256,24 @@ abstract class AppLocalizations {
   /// In en, this message translates to:
   /// **'{field} is required'**
   String fieldRequired(String field);
+
+  /// No description provided for @formFields.
+  ///
+  /// In en, this message translates to:
+  /// **'Form Fields'**
+  String get formFields;
+
+  /// No description provided for @clearAll.
+  ///
+  /// In en, this message translates to:
+  /// **'Clear All'**
+  String get clearAll;
+
+  /// No description provided for @saved.
+  ///
+  /// In en, this message translates to:
+  /// **'Saved'**
+  String get saved;
 }
 
 class _AppLocalizationsDelegate extends LocalizationsDelegate<AppLocalizations> {

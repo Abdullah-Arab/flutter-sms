@@ -92,4 +92,13 @@ class AppLocalizationsEn extends AppLocalizations {
   String fieldRequired(String field) {
     return '$field is required';
   }
+
+  @override
+  String get formFields => 'Form Fields';
+
+  @override
+  String get clearAll => 'Clear All';
+
+  @override
+  String get saved => 'Saved';
 }

@@ -27,6 +27,9 @@
   "actions": "إجراءات",
   "enterField": "أدخل {field}",
   "fieldRequired": "{field} مطلوب",
+  "formFields": "حقول النموذج",
+  "clearAll": "مسح الكل",
+  "saved": "محفوظ",
   "@enterField": {
     "description": "Enter field placeholder",
     "placeholders": {

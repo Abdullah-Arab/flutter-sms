@@ -157,8 +157,8 @@ class ProviderListScreen extends StatelessWidget {
                           curve: Curves.easeInOut,
                           child: ProviderListItem(
                             provider: provider,
-                            onTap: () {
-                              cubit.selectProvider(provider);
+                            onTap: () async {
+                              await cubit.selectProvider(provider);
                               context.router.push(const ActionListRoute());
                             },
                           ),

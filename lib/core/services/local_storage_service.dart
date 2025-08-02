@@ -31,6 +31,19 @@ class LocalStorageService {
     await box.clear();
   }
 
+  // String-specific methods for form persistence
+  Future<void> setString(String key, String value) async {
+    await saveData(_userDataBox, key, value);
+  }
+
+  String? getString(String key) {
+    return getData<String>(_userDataBox, key);
+  }
+
+  Future<void> remove(String key) async {
+    await deleteData(_userDataBox, key);
+  }
+
   // Settings specific methods
   Future<void> saveSetting(String key, dynamic value) async {
     await saveData(_settingsBox, key, value);

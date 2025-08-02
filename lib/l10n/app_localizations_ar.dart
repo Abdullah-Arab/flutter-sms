@@ -92,4 +92,13 @@ class AppLocalizationsAr extends AppLocalizations {
   String fieldRequired(String field) {
     return '$field مطلوب';
   }
+
+  @override
+  String get formFields => 'حقول النموذج';
+
+  @override
+  String get clearAll => 'مسح الكل';
+
+  @override
+  String get saved => 'محفوظ';
 }

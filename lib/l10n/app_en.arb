@@ -27,6 +27,9 @@
   "actions": "actions",
   "enterField": "Enter {field}",
   "fieldRequired": "{field} is required",
+  "formFields": "Form Fields",
+  "clearAll": "Clear All",
+  "saved": "Saved",
   "@enterField": {
     "description": "Enter field placeholder",
     "placeholders": {
