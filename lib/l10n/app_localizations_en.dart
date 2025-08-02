@@ -12,56 +12,84 @@ class AppLocalizationsEn extends AppLocalizations {
   String get appTitle => 'SMS Commands';
 
   @override
-  String get selectCategory => 'Select Category';
+  String get selectCategory => 'Select a Service Category';
 
   @override
-  String get selectProvider => 'Select Provider';
+  String get selectCategoryDescription => 'Choose from banking, telecom, and government services';
 
   @override
-  String get selectAction => 'Select Action';
+  String get selectProvider => 'Select a Service Provider';
 
   @override
-  String get enter => 'Enter';
+  String get selectProviderDescription => 'Choose from available service providers';
 
   @override
-  String get send => 'Send SMS';
+  String get fillForm => 'Fill the Form';
 
   @override
-  String get smsSent => 'SMS sent';
+  String get fillFormDescription => 'Complete the form below to generate your SMS';
 
   @override
-  String get categories => 'Categories';
+  String get smsPreview => 'SMS Preview';
 
   @override
-  String get providers => 'Providers';
+  String get loadingServices => 'Loading services...';
 
   @override
-  String get actions => 'Actions';
+  String get loadingProviders => 'Loading providers...';
 
   @override
-  String get loading => 'Loading...';
+  String get noCategorySelected => 'No category selected';
 
   @override
-  String get required => 'Required';
+  String get noCategorySelectedDescription => 'Please go back and select a category first';
+
+  @override
+  String get goBack => 'Go Back';
+
+  @override
+  String get retry => 'Retry';
 
   @override
   String get error => 'Error';
 
   @override
-  String get success => 'Success';
+  String get unknownState => 'Unknown state';
 
   @override
-  String get cancel => 'Cancel';
+  String get noActionSelected => 'No action selected';
 
   @override
-  String get confirm => 'Confirm';
+  String get sendSms => 'Send SMS';
 
   @override
-  String get back => 'Back';
+  String get smsAppOpenedSuccess => 'SMS app opened successfully!';
 
   @override
-  String get next => 'Next';
+  String get smsAppFailed => 'Failed to open SMS app';
 
   @override
-  String get submit => 'Submit';
+  String get about => 'About';
+
+  @override
+  String get aboutDescription => 'Generate SMS commands for various Libyan service providers. Select a category, provider, and action to create your SMS.';
+
+  @override
+  String get ok => 'OK';
+
+  @override
+  String get providers => 'providers';
+
+  @override
+  String get actions => 'actions';
+
+  @override
+  String enterField(String field) {
+    return 'Enter $field';
+  }
+
+  @override
+  String fieldRequired(String field) {
+    return '$field is required';
+  }
 }

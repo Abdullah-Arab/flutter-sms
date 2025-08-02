@@ -1,21 +1,46 @@
 {
-  "appTitle": "أوامر الرسائل",
-  "selectCategory": "اختر القسم",
-  "selectProvider": "اختر المزود",
-  "selectAction": "اختر العملية",
-  "enter": "أدخل",
-  "send": "إرسال رسالة",
-  "smsSent": "تم إرسال الرسالة",
-  "categories": "الفئات",
-  "providers": "المزودون",
-  "actions": "العمليات",
-  "loading": "جارٍ التحميل...",
-  "required": "مطلوب",
+  "@@locale": "ar",
+  "appTitle": "أوامر الرسائل النصية",
+  "selectCategory": "اختر فئة الخدمة",
+  "selectCategoryDescription": "اختر من خدمات البنوك والاتصالات والحكومة",
+  "selectProvider": "اختر مزود الخدمة",
+  "selectProviderDescription": "اختر من مزودي الخدمات المتاحة",
+  "fillForm": "املأ النموذج",
+  "fillFormDescription": "أكمل النموذج أدناه لإنشاء رسالتك النصية",
+  "smsPreview": "معاينة الرسالة",
+  "loadingServices": "جاري تحميل الخدمات...",
+  "loadingProviders": "جاري تحميل المزودين...",
+  "noCategorySelected": "لم يتم اختيار فئة",
+  "noCategorySelectedDescription": "يرجى العودة واختيار فئة أولاً",
+  "goBack": "العودة",
+  "retry": "إعادة المحاولة",
   "error": "خطأ",
-  "success": "نجح",
-  "cancel": "إلغاء",
-  "confirm": "تأكيد",
-  "back": "رجوع",
-  "next": "التالي",
-  "submit": "إرسال"
+  "unknownState": "حالة غير معروفة",
+  "noActionSelected": "لم يتم اختيار إجراء",
+  "sendSms": "إرسال الرسالة",
+  "smsAppOpenedSuccess": "تم فتح تطبيق الرسائل بنجاح!",
+  "smsAppFailed": "فشل في فتح تطبيق الرسائل",
+  "about": "حول",
+  "aboutDescription": "إنشاء أوامر رسائل نصية لمختلف مزودي الخدمات الليبيين. اختر فئة ومزود وإجراء لإنشاء رسالتك النصية.",
+  "ok": "موافق",
+  "providers": "مزودين",
+  "actions": "إجراءات",
+  "enterField": "أدخل {field}",
+  "fieldRequired": "{field} مطلوب",
+  "@enterField": {
+    "description": "Enter field placeholder",
+    "placeholders": {
+      "field": {
+        "type": "String"
+      }
+    }
+  },
+  "@fieldRequired": {
+    "description": "Field required error message",
+    "placeholders": {
+      "field": {
+        "type": "String"
+      }
+    }
+  }
 }

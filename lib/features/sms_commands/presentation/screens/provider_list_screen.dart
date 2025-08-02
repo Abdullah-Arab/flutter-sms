@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
 import 'package:auto_route/auto_route.dart';
+import '../../../../l10n/app_localizations.dart';
 import '../../../../core/routing/app_router.dart';
 import '../../logic/sms_commands_cubit.dart';
 import '../../logic/sms_commands_state.dart';
@@ -13,58 +14,161 @@ class ProviderListScreen extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     final cubit = context.read<SmsCommandsCubit>();
+    final l10n = AppLocalizations.of(context)!;
 
     return Scaffold(
-      appBar: AppBar(title: const Text('Select Provider')),
+      backgroundColor: Colors.grey.shade50,
+      appBar: AppBar(
+        title: Text(
+          l10n.selectProvider,
+          style: const TextStyle(fontWeight: FontWeight.bold),
+        ),
+        leading: IconButton(
+          icon: const Icon(Icons.arrow_back),
+          onPressed: () => context.router.pop(),
+        ),
+      ),
       body: BlocBuilder<SmsCommandsCubit, SmsCommandsState>(
         bloc: cubit,
         builder: (context, state) {
-          print(
-            'ProviderListScreen - Current state: ${state.runtimeType}',
-          ); // Debug print
+          print('ProviderListScreen - Current state: ${state.runtimeType}');
 
           if (state is SmsCommandsInitial) {
-            return const Center(
-              child: Text('Initial state - loading categories...'),
+            return Center(
+              child: Column(
+                mainAxisAlignment: MainAxisAlignment.center,
+                children: [
+                  const CircularProgressIndicator(),
+                  const SizedBox(height: 16),
+                  Text(l10n.loadingProviders),
+                ],
+              ),
             );
           }
 
           if (state is SmsCommandsLoading) {
-            return const Center(child: CircularProgressIndicator());
+            return Center(
+              child: Column(
+                mainAxisAlignment: MainAxisAlignment.center,
+                children: [
+                  const CircularProgressIndicator(),
+                  const SizedBox(height: 16),
+                  Text(l10n.loadingProviders),
+                ],
+              ),
+            );
           }
 
           if (state is SmsCommandsLoaded) {
             print(
               'ProviderListScreen - Selected category: ${state.selectedCategory?.nameEn}',
-            ); // Debug print
+            );
             if (state.selectedCategory == null) {
               return Center(
                 child: Column(
                   mainAxisAlignment: MainAxisAlignment.center,
                   children: [
-                    const Text('No category selected'),
+                    Icon(
+                      Icons.category_outlined,
+                      size: 64,
+                      color: Colors.grey.shade400,
+                    ),
                     const SizedBox(height: 16),
-                    ElevatedButton(
+                    Text(
+                      l10n.noCategorySelected,
+                      style: Theme.of(context).textTheme.headlineSmall
+                          ?.copyWith(color: Colors.grey.shade600),
+                    ),
+                    const SizedBox(height: 8),
+                    Text(
+                      l10n.noCategorySelectedDescription,
+                      style: Theme.of(context).textTheme.bodyMedium?.copyWith(
+                        color: Colors.grey.shade500,
+                      ),
+                    ),
+                    const SizedBox(height: 24),
+                    ElevatedButton.icon(
                       onPressed: () => context.router.pop(),
-                      child: const Text('Go Back'),
+                      icon: const Icon(Icons.arrow_back),
+                      label: Text(l10n.goBack),
                     ),
                   ],
                 ),
               );
             }
 
-            return ListView.builder(
-              itemCount: state.selectedCategory!.providers.length,
-              itemBuilder: (context, index) {
-                final provider = state.selectedCategory!.providers[index];
-                return ProviderListItem(
-                  provider: provider,
-                  onTap: () {
-                    cubit.selectProvider(provider);
-                    context.router.push(const ActionListRoute());
-                  },
-                );
-              },
+            return CustomScrollView(
+              slivers: [
+                SliverToBoxAdapter(
+                  child: Padding(
+                    padding: const EdgeInsets.all(16),
+                    child: Column(
+                      crossAxisAlignment: CrossAxisAlignment.start,
+                      children: [
+                        Row(
+                          children: [
+                            Icon(
+                              Icons.account_balance,
+                              color: Colors.green.shade600,
+                              size: 24,
+                            ),
+                            const SizedBox(width: 8),
+                            Text(
+                              state.selectedCategory!.nameEn,
+                              style: Theme.of(
+                                context,
+                              ).textTheme.titleMedium?.copyWith(
+                                fontWeight: FontWeight.bold,
+                                color: Colors.green.shade600,
+                              ),
+                            ),
+                          ],
+                        ),
+                        const SizedBox(height: 16),
+                        Text(
+                          l10n.selectProvider,
+                          style: Theme.of(
+                            context,
+                          ).textTheme.headlineSmall?.copyWith(
+                            fontWeight: FontWeight.bold,
+                            color: Colors.black87,
+                          ),
+                        ),
+                        const SizedBox(height: 8),
+                        Text(
+                          l10n.selectProviderDescription,
+                          style: Theme.of(context).textTheme.bodyMedium
+                              ?.copyWith(color: Colors.grey.shade600),
+                        ),
+                        const SizedBox(height: 24),
+                      ],
+                    ),
+                  ),
+                ),
+                SliverPadding(
+                  padding: const EdgeInsets.symmetric(horizontal: 16),
+                  sliver: SliverList(
+                    delegate: SliverChildBuilderDelegate((context, index) {
+                      final provider = state.selectedCategory!.providers[index];
+                      return Padding(
+                        padding: const EdgeInsets.only(bottom: 12),
+                        child: AnimatedContainer(
+                          duration: const Duration(milliseconds: 300),
+                          curve: Curves.easeInOut,
+                          child: ProviderListItem(
+                            provider: provider,
+                            onTap: () {
+                              cubit.selectProvider(provider);
+                              context.router.push(const ActionListRoute());
+                            },
+                          ),
+                        ),
+                      );
+                    }, childCount: state.selectedCategory!.providers.length),
+                  ),
+                ),
+                const SliverToBoxAdapter(child: SizedBox(height: 24)),
+              ],
             );
           }
 
@@ -73,18 +177,38 @@ class ProviderListScreen extends StatelessWidget {
               child: Column(
                 mainAxisAlignment: MainAxisAlignment.center,
                 children: [
-                  const Text('Error'),
-                  Text(state.message),
-                  ElevatedButton(
+                  Icon(
+                    Icons.error_outline,
+                    size: 64,
+                    color: Colors.red.shade300,
+                  ),
+                  const SizedBox(height: 16),
+                  Text(
+                    l10n.error,
+                    style: Theme.of(context).textTheme.headlineSmall?.copyWith(
+                      color: Colors.red.shade700,
+                    ),
+                  ),
+                  const SizedBox(height: 8),
+                  Text(
+                    state.message,
+                    textAlign: TextAlign.center,
+                    style: Theme.of(context).textTheme.bodyMedium?.copyWith(
+                      color: Colors.grey.shade600,
+                    ),
+                  ),
+                  const SizedBox(height: 24),
+                  ElevatedButton.icon(
                     onPressed: () => cubit.loadCategories(),
-                    child: const Text('Retry'),
+                    icon: const Icon(Icons.refresh),
+                    label: Text(l10n.retry),
                   ),
                 ],
               ),
             );
           }
 
-          return const Center(child: Text('Unknown state'));
+          return Center(child: Text(l10n.unknownState));
         },
       ),
     );

@@ -9,59 +9,87 @@ class AppLocalizationsAr extends AppLocalizations {
   AppLocalizationsAr([String locale = 'ar']) : super(locale);
 
   @override
-  String get appTitle => 'أوامر الرسائل';
+  String get appTitle => 'أوامر الرسائل النصية';
 
   @override
-  String get selectCategory => 'اختر القسم';
+  String get selectCategory => 'اختر فئة الخدمة';
 
   @override
-  String get selectProvider => 'اختر المزود';
+  String get selectCategoryDescription => 'اختر من خدمات البنوك والاتصالات والحكومة';
 
   @override
-  String get selectAction => 'اختر العملية';
+  String get selectProvider => 'اختر مزود الخدمة';
 
   @override
-  String get enter => 'أدخل';
+  String get selectProviderDescription => 'اختر من مزودي الخدمات المتاحة';
 
   @override
-  String get send => 'إرسال رسالة';
+  String get fillForm => 'املأ النموذج';
 
   @override
-  String get smsSent => 'تم إرسال الرسالة';
+  String get fillFormDescription => 'أكمل النموذج أدناه لإنشاء رسالتك النصية';
 
   @override
-  String get categories => 'الفئات';
+  String get smsPreview => 'معاينة الرسالة';
 
   @override
-  String get providers => 'المزودون';
+  String get loadingServices => 'جاري تحميل الخدمات...';
 
   @override
-  String get actions => 'العمليات';
+  String get loadingProviders => 'جاري تحميل المزودين...';
 
   @override
-  String get loading => 'جارٍ التحميل...';
+  String get noCategorySelected => 'لم يتم اختيار فئة';
 
   @override
-  String get required => 'مطلوب';
+  String get noCategorySelectedDescription => 'يرجى العودة واختيار فئة أولاً';
+
+  @override
+  String get goBack => 'العودة';
+
+  @override
+  String get retry => 'إعادة المحاولة';
 
   @override
   String get error => 'خطأ';
 
   @override
-  String get success => 'نجح';
+  String get unknownState => 'حالة غير معروفة';
 
   @override
-  String get cancel => 'إلغاء';
+  String get noActionSelected => 'لم يتم اختيار إجراء';
 
   @override
-  String get confirm => 'تأكيد';
+  String get sendSms => 'إرسال الرسالة';
 
   @override
-  String get back => 'رجوع';
+  String get smsAppOpenedSuccess => 'تم فتح تطبيق الرسائل بنجاح!';
 
   @override
-  String get next => 'التالي';
+  String get smsAppFailed => 'فشل في فتح تطبيق الرسائل';
 
   @override
-  String get submit => 'إرسال';
+  String get about => 'حول';
+
+  @override
+  String get aboutDescription => 'إنشاء أوامر رسائل نصية لمختلف مزودي الخدمات الليبيين. اختر فئة ومزود وإجراء لإنشاء رسالتك النصية.';
+
+  @override
+  String get ok => 'موافق';
+
+  @override
+  String get providers => 'مزودين';
+
+  @override
+  String get actions => 'إجراءات';
+
+  @override
+  String enterField(String field) {
+    return 'أدخل $field';
+  }
+
+  @override
+  String fieldRequired(String field) {
+    return '$field مطلوب';
+  }
 }

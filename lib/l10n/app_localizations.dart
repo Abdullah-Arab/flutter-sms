@@ -104,68 +104,80 @@ abstract class AppLocalizations {
   /// No description provided for @selectCategory.
   ///
   /// In en, this message translates to:
-  /// **'Select Category'**
+  /// **'Select a Service Category'**
   String get selectCategory;
+
+  /// No description provided for @selectCategoryDescription.
+  ///
+  /// In en, this message translates to:
+  /// **'Choose from banking, telecom, and government services'**
+  String get selectCategoryDescription;
 
   /// No description provided for @selectProvider.
   ///
   /// In en, this message translates to:
-  /// **'Select Provider'**
+  /// **'Select a Service Provider'**
   String get selectProvider;
 
-  /// No description provided for @selectAction.
+  /// No description provided for @selectProviderDescription.
   ///
   /// In en, this message translates to:
-  /// **'Select Action'**
-  String get selectAction;
+  /// **'Choose from available service providers'**
+  String get selectProviderDescription;
 
-  /// No description provided for @enter.
+  /// No description provided for @fillForm.
   ///
   /// In en, this message translates to:
-  /// **'Enter'**
-  String get enter;
+  /// **'Fill the Form'**
+  String get fillForm;
 
-  /// No description provided for @send.
+  /// No description provided for @fillFormDescription.
   ///
   /// In en, this message translates to:
-  /// **'Send SMS'**
-  String get send;
+  /// **'Complete the form below to generate your SMS'**
+  String get fillFormDescription;
 
-  /// No description provided for @smsSent.
+  /// No description provided for @smsPreview.
   ///
   /// In en, this message translates to:
-  /// **'SMS sent'**
-  String get smsSent;
+  /// **'SMS Preview'**
+  String get smsPreview;
 
-  /// No description provided for @categories.
+  /// No description provided for @loadingServices.
   ///
   /// In en, this message translates to:
-  /// **'Categories'**
-  String get categories;
+  /// **'Loading services...'**
+  String get loadingServices;
 
-  /// No description provided for @providers.
+  /// No description provided for @loadingProviders.
   ///
   /// In en, this message translates to:
-  /// **'Providers'**
-  String get providers;
+  /// **'Loading providers...'**
+  String get loadingProviders;
 
-  /// No description provided for @actions.
+  /// No description provided for @noCategorySelected.
   ///
   /// In en, this message translates to:
-  /// **'Actions'**
-  String get actions;
+  /// **'No category selected'**
+  String get noCategorySelected;
 
-  /// No description provided for @loading.
+  /// No description provided for @noCategorySelectedDescription.
   ///
   /// In en, this message translates to:
-  /// **'Loading...'**
-  String get loading;
+  /// **'Please go back and select a category first'**
+  String get noCategorySelectedDescription;
 
-  /// No description provided for @required.
+  /// No description provided for @goBack.
   ///
   /// In en, this message translates to:
-  /// **'Required'**
-  String get required;
+  /// **'Go Back'**
+  String get goBack;
+
+  /// No description provided for @retry.
+  ///
+  /// In en, this message translates to:
+  /// **'Retry'**
+  String get retry;
 
   /// No description provided for @error.
   ///
@@ -173,41 +185,77 @@ abstract class AppLocalizations {
   /// **'Error'**
   String get error;
 
-  /// No description provided for @success.
+  /// No description provided for @unknownState.
   ///
   /// In en, this message translates to:
-  /// **'Success'**
-  String get success;
+  /// **'Unknown state'**
+  String get unknownState;
 
-  /// No description provided for @cancel.
+  /// No description provided for @noActionSelected.
   ///
   /// In en, this message translates to:
-  /// **'Cancel'**
-  String get cancel;
+  /// **'No action selected'**
+  String get noActionSelected;
 
-  /// No description provided for @confirm.
+  /// No description provided for @sendSms.
   ///
   /// In en, this message translates to:
-  /// **'Confirm'**
-  String get confirm;
+  /// **'Send SMS'**
+  String get sendSms;
 
-  /// No description provided for @back.
+  /// No description provided for @smsAppOpenedSuccess.
   ///
   /// In en, this message translates to:
-  /// **'Back'**
-  String get back;
+  /// **'SMS app opened successfully!'**
+  String get smsAppOpenedSuccess;
 
-  /// No description provided for @next.
+  /// No description provided for @smsAppFailed.
   ///
   /// In en, this message translates to:
-  /// **'Next'**
-  String get next;
+  /// **'Failed to open SMS app'**
+  String get smsAppFailed;
 
-  /// No description provided for @submit.
+  /// No description provided for @about.
   ///
   /// In en, this message translates to:
-  /// **'Submit'**
-  String get submit;
+  /// **'About'**
+  String get about;
+
+  /// No description provided for @aboutDescription.
+  ///
+  /// In en, this message translates to:
+  /// **'Generate SMS commands for various Libyan service providers. Select a category, provider, and action to create your SMS.'**
+  String get aboutDescription;
+
+  /// No description provided for @ok.
+  ///
+  /// In en, this message translates to:
+  /// **'OK'**
+  String get ok;
+
+  /// No description provided for @providers.
+  ///
+  /// In en, this message translates to:
+  /// **'providers'**
+  String get providers;
+
+  /// No description provided for @actions.
+  ///
+  /// In en, this message translates to:
+  /// **'actions'**
+  String get actions;
+
+  /// Enter field placeholder
+  ///
+  /// In en, this message translates to:
+  /// **'Enter {field}'**
+  String enterField(String field);
+
+  /// Field required error message
+  ///
+  /// In en, this message translates to:
+  /// **'{field} is required'**
+  String fieldRequired(String field);
 }
 
 class _AppLocalizationsDelegate extends LocalizationsDelegate<AppLocalizations> {
