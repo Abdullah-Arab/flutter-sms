@@ -1,0 +1,49 @@
+{
+  "@@locale": "en",
+  "appTitle": "SMS Commands",
+  "selectCategory": "Select a Service Category",
+  "selectCategoryDescription": "Choose from banking, telecom, and government services",
+  "selectProvider": "Select a Service Provider",
+  "selectProviderDescription": "Choose from available service providers",
+  "fillForm": "Fill the Form",
+  "fillFormDescription": "Complete the form below to generate your SMS",
+  "smsPreview": "SMS Preview",
+  "loadingServices": "Loading services...",
+  "loadingProviders": "Loading providers...",
+  "noCategorySelected": "No category selected",
+  "noCategorySelectedDescription": "Please go back and select a category first",
+  "goBack": "Go Back",
+  "retry": "Retry",
+  "error": "Error",
+  "unknownState": "Unknown state",
+  "noActionSelected": "No action selected",
+  "sendSms": "Send SMS",
+  "smsAppOpenedSuccess": "SMS app opened successfully!",
+  "smsAppFailed": "Failed to open SMS app",
+  "about": "About",
+  "aboutDescription": "Generate SMS commands for various Libyan service providers. Select a category, provider, and action to create your SMS.",
+  "ok": "OK",
+  "providers": "providers",
+  "actions": "actions",
+  "enterField": "Enter {field}",
+  "fieldRequired": "{field} is required",
+  "formFields": "Form Fields",
+  "clearAll": "Clear All",
+  "saved": "Saved",
+  "@enterField": {
+    "description": "Enter field placeholder",
+    "placeholders": {
+      "field": {
+        "type": "String"
+      }
+    }
+  },
+  "@fieldRequired": {
+    "description": "Field required error message",
+    "placeholders": {
+      "field": {
+        "type": "String"
+      }
+    }
+  }
+}
